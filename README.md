@@ -1,4 +1,4 @@
-# Bridge-crm
+# bridge-crm
 
 ## Badges
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f0067f5a-2f56-484b-acaa-d9b3686a947d/deploy-status)](https://app.netlify.com/sites/Bridge-crmector/deploys)
@@ -22,7 +22,7 @@
 
 ## Description
 
-
+add description here
 
 ## Table of Contents
 
@@ -83,7 +83,7 @@ Your changes will be reviewed and approved as appropriate.
 
 ## Links
 
-### [Github Profile](https://github.com/mradison/Bridge-crm/)
+### [Github Profile](https://github.com/mradison/bridge-crm/)
 
 
 # MIT License

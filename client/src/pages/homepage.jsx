@@ -1,6 +1,6 @@
 // TODO: ADD STARTER CODE
 import { useQuery } from '@apollo/client';
-import Tasks from './components/Tasks';
+import Tasks from '../components/Tasks';
 
 function Homepage({ TasksValue }) {
 

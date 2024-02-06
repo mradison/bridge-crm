@@ -1,15 +1,13 @@
 import ReactDOM from 'react-dom/client';
 import React from 'react';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
 
 import App from './App.jsx';
 import Homepage from './pages/homepage.jsx';
-import Signup from './pages/Signup';
+import Signup from './pages/Signup.jsx';
 import Login from './pages/Login';
 import Error from './pages/Error';
-
-import { BrowserRouter } from 'react-router-dom';
-import { createBrowserRouter } from 'react-router-dom';
 
 const router = createBrowserRouter([
   {
@@ -32,9 +30,5 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </React.StrictMode>
+  <RouterProvider router={router} />
 );

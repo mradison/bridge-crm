@@ -28,10 +28,24 @@ const typeDefs = `
     activityInfo: [Activity]
   }
 
+  type Groups {
+    _id: ID
+    name: String!
+    description: String
+  }
+
   type Group {
     _id: ID
     name: String!
     description: String
+  }
+
+  type Activities {
+    _id: ID
+    type: String!
+    subject: String
+    description: String
+    activitydate: String
   }
 
   type Activity {
@@ -82,10 +96,10 @@ const typeDefs = `
     user(username: String!): User
     contacts: [Contact]
     contact(contactid: ID!): Contact
-    group: [Group]
-    activity: [Activity]    
-    
-
+    group(groupid: ID!): Group
+    groups: [Groups]
+    activity(activityid: ID!): Activity
+    activities: [Activities]
   }
 
 

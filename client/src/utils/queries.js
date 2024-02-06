@@ -14,3 +14,88 @@ export const QUERY_USER = gql`
     }
   }
 `;
+
+export const QUERY_CONTACTS = gql`
+query getAllContacts {
+  contacts {
+    _id
+    name
+    nickname
+    email
+    company
+    title
+    department
+    businessphone
+    mobilephone
+    address1
+    address2
+    city
+    state
+    country
+    zip
+    website
+  }
+}`;
+
+export const QUERY_SINGLE_CONTACT = gql`
+query getSingleContact($contactid: ID!) {
+  contact(contactid: $contactid) {
+    _id
+    name
+    nickname
+    email
+    company
+    title
+    department
+    businessphone
+    mobilephone
+    address1
+    address2
+    city
+    state
+    country
+    zip
+    website
+
+  }
+}`;
+
+export const QUERY_GROUPS = gql`
+query getGroups {
+  groups {
+    _id
+    name
+    description
+  }
+}`;
+
+export const QUERY_SINGLE_GROUP = gql`
+query getSingleGroup($groupid: ID!) {
+  group(groupid: $groupid) {
+    _id
+    name
+    description
+  }
+}`;
+
+export const QUERY_ACTIVITIES = gql`
+query getActivities {
+  activities {
+    _id
+    type
+    subject
+    description
+    activitydate
+  }
+}`;
+
+export const QUERY_SINGLE_ACTIVITY = gql`
+query getSingleActivity($activityid: ID!) {
+  activity(activityid: $activityid) {
+    _id
+    type
+    subject
+    description
+    activitydate
+  }
+}`;

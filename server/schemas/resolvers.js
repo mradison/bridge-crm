@@ -17,11 +17,17 @@ const resolvers = {
     contact: async (parent, { contactid }) => {
         return Contact.findOne({ _id: contactid }).populate();
     },
-    group: async () => {
+    groups: async () => {
         return Group.find().populate();
     },
-    activity: async () => {
+    group: async (parent, { groupid }) => {
+        return Group.findOne({ _id: groupid }).populate();
+    },
+    activities: async () => {
         return Activity.find().populate();
+    },
+    activity: async (parent, { activityid }) => {
+        return Activity.findOne({ _id: activityid }).populate();
     },
   },
 

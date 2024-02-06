@@ -1,3 +1,5 @@
+import './App.css';
+import React from 'react';
 import {
   ApolloClient,
   InMemoryCache,
@@ -7,8 +9,9 @@ import {
 import { setContext } from '@apollo/client/link/context';
 import Homepage from './pages/homepage.jsx';
 
-import Header from './components/Header';
-import Footer from './components/Footer';
+
+ import Header from './components/Header';
+// import Footer from './components/Footer';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -37,10 +40,14 @@ function App() {
 
   return (
     <ApolloProvider client={client}>
-      <Header />
-      <Homepage />
+      <div>
+        <Header />
+        <Homepage />
+        {/* <Footer /> */}
+      </div>
     </ApolloProvider>
-  )
+  );
+  
 }
 
 export default App

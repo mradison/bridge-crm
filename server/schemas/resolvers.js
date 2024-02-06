@@ -69,7 +69,7 @@ const resolvers = {
         });
 
         await User.findOneAndUpdate(
-          { _id: '65beab230cfaad5dc144e67f' },
+          { _id: context.user._id },
           { $addToSet: { contact: contact._id } }
         );
 

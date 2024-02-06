@@ -8,7 +8,7 @@ function Homepage({ TasksValue }) {
         <main>
             <div>
                 <h1>Welcome!</h1>
-                <section class="contentSection">
+                <section className="contentSection">
                 {TasksValue ? <Tasks/> : null}
                 </section>
             </div>

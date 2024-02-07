@@ -1,8 +1,58 @@
- #root {
+/* body {
+  background-color: brown;
+  color: blue;
+} */
+
+/* .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  border: 10 px solid firebrick
+  
+} 
+
+.header {
+  border-width: 5 px;
+  border-color: black;
+  border: 10 px solid firebrick;
+}
+
+.center {
+flex-grow: 1;
+align-self: center;
+border: 10 px solid firebrick
+}
+
+.footer {
+  border: 10 px solid firebrick
+} */
+ 
+ 
+ /* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  padding: 15px 5px;
+  background-color: pink
+}
+
+.footer {
+  padding: 15px 5px;
+  background-color: pink;
+  margin-top: auto;
 }
 
 .logo {
@@ -39,4 +89,4 @@
 
 .read-the-docs {
   color: #888;
-} 
+}  */

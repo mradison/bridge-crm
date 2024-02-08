@@ -7,6 +7,8 @@ import App from './App.jsx';
 import Homepage from './pages/homepage.jsx';
 import Signup from './pages/Signup.jsx';
 import Groups from './pages/Groups.jsx';
+import Contacts from './pages/Contacts.jsx';
+import Activities from './pages/Activities.jsx';
 import Login from './pages/Login';
 import Error from './pages/Error';
 
@@ -28,6 +30,14 @@ const router = createBrowserRouter([
       },{
         path: '/Groups',
         element: <Groups />
+      },
+      ,{
+        path: '/Contacts',
+        element: <Contacts />
+      },
+      {
+        path: '/Activities',
+        element: <Activities />
       },
     ],
   },

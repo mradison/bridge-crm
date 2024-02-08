@@ -5,7 +5,7 @@ import Tasks from '../components/Tasks';
 function Homepage({ TasksValue }) {
 
     return(
-        <main>
+        <main className='main'>
             <div>
                 <h1>Welcome!</h1>
                 <section className="contentSection">

@@ -1,4 +1,135 @@
-:root {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #242424;
+  color: #595ec1;
+  box-sizing: border-box;
+  /* border: 2px solid greenyellow; */
+}
+
+html {
+  font-size: 22px;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+  border: 1px solid mediumblue;
+  margin: auto;
+}
+
+header {
+  padding: 0 0.25em;
+  color: aliceblue;
+  align-items: center;
+  border: white solid 10px;
+  width: 100%;
+}
+
+.main {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  color: white;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: white solid 10px;
+}
+
+footer {
+  width: 100%;
+  padding: 0.25em;
+  color: aliceblue;
+  display: flex;
+  border: white solid 10px;
+}
+
+.footer-links {
+  display: flex;
+
+}
+
+.flex-container {
+  display: block;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.footer-links {
+margin: 10px;
+padding: 10px;
+}
+
+.social-logos {
+  margin: 10px;
+  padding: 10px;
+}
+
+.copyright {
+  margin: 10px;
+  padding: 10px;
+} 
+
+.btn {
+  margin-left: 30px;
+  margin-top: 5px;
+  padding: 5px;
+  display: flex;
+  border: 2px solid greenyellow;
+}
+
+.m-0 {
+  margin-left: 10px;
+  padding: 10px;
+}
+
+.logo {
+  margin: 10px;
+  padding: 5px;
+}
+
+.flex-item {
+  margin-left: 10px;
+
+}
+
+.btn-submit {
+  margin: 10px;
+  padding: 5px;
+}
+
+.col-12 * {
+  border: 2px solid greenyellow;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+/*
+.flex-item span {
+  margin: auto;
+  font-size: 25px;
+  padding: 10px;
+}
+
+/* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -65,4 +196,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */

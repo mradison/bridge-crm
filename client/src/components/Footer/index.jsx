@@ -11,40 +11,45 @@ const Footer = () => {
   const location = useLocation();
   const navigate = useNavigate();
   return (
-    <footer className="w-100 mt-auto text-dark p-4">
-      <div className="container text-center mb-5">
+    <footer>
+      <div className="flex-container">
         {location.pathname !== "/" && (
           <button className="btn btn-dark mb-3" onClick={() => navigate(-1)}>
             &larr; Go Back
           </button>
         )}
-        <h4>&copy; {new Date().getFullYear()} - Bridge CRM</h4>
-        <h5>Contact Us</h5>
-        <h5>Careers</h5>
-        <h5>Disclosures</h5>
-      </div>
-      <div className="social-logos">
-        <span>
-          <a href="">{<img src={FacebookSVG} alt="" />}</a>
-        </span>
-        <span>
-          <a href="">{<img src={InstagramSVG} alt="" />}</a>
-        </span>
-        <span>
-          <a href="">{<img src={LinkedInSVG} alt="" />}</a>
-        </span>
-        <span>
-          <a href="">{<img src={MSVG} alt="" />}</a>
-        </span>
-        <span>
-          <a href="">{<img src={TikTokSVG} alt="" />}</a>
-        </span>
-        <span>
-          <a href="">{<img src={TwitterSVG} alt="" />}</a>
-        </span>
-        <span>
-          <a href="">{<img src={youtubeSVG} alt="" />}</a>
-        </span>
+        <div className="footer-links">
+          <div className="flex-item"><span>Contact Us</span></div>
+          <div className="flex-item"><span>Careers</span></div>
+          <div className="flex-item"><span>Disclosures</span></div>
+        </div>
+
+        <div className="social-logos">
+          <span className="logo">
+            <a href="">{<img src={FacebookSVG} alt="" />}</a>
+          </span>
+          <span className="logo">
+            <a href="">{<img src={InstagramSVG} alt="" />}</a>
+          </span>
+          <span className="logo">
+            <a href="">{<img src={LinkedInSVG} alt="" />}</a>
+          </span>
+          <span className="logo">
+            <a href="">{<img src={MSVG} alt="" />}</a>
+          </span>
+          <span className="logo">
+            <a href="">{<img src={TikTokSVG} alt="" />}</a>
+          </span>
+          <span className="logo">
+            <a href="">{<img src={TwitterSVG} alt="" />}</a>
+          </span>
+          <span className="logo">
+            <a href="">{<img src={youtubeSVG} alt="" />}</a>
+          </span>
+        </div>
+          <div>
+        <h4 className="copyright">&copy; {new Date().getFullYear()} - Bridge CRM</h4>
+        </div>
       </div>
     </footer>
   );

@@ -15,9 +15,6 @@ const Header = () => {
             Bridge CRM
           </h1>
         </Link>
-        <p className="m-0" style={{ fontSize: '1.75rem', fontWeight: '700' }}>
-          Welcome to Bridge CRM!
-        </p>
         <div>
           {Auth.loggedIn() ? (
             <>
@@ -30,12 +27,27 @@ const Header = () => {
             </>
           ) : (
             <>
+            <div class="menuButtons">
+              <button>
+              Contact list
+              </button>
+              <button>
+              Group list
+              </button>
+              <button>
+              Activity list
+              </button>
+              <button>
               <Link className="btn btn-lg btn-primary m-2" to="/login">
                 Login
               </Link>
+              </button>
+              <button>
               <Link className="btn btn-lg btn-light m-2" to="/signup">
                 Signup
               </Link>
+              </button>
+            </div>
             </>
           )}
         </div>

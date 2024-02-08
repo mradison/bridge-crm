@@ -55,7 +55,7 @@ const resolvers = {
       return { token, user };
     },
     addContact: async (parent, { newContact }, context) => {
-      // if (context.user) {
+      if (context.user) {
         const contact = await Contact.create({
           name: newContact.name,
           nickname: newContact.nickname,
@@ -81,10 +81,11 @@ const resolvers = {
 
         return contact;
       }
-      // throw AuthenticationError; }
+      throw AuthenticationError; 
+    }
       ,    
     updatecontactGroup: async (parent, { newGroupInfo, contactId }, context) => {
-        // if (context.user) {
+        if (context.user) {
           const updatedContact = await Contact.findByIdAndUpdate(
             { _id: contactId },
             { $push: { groupInfo: newGroupInfo }},
@@ -92,11 +93,11 @@ const resolvers = {
           );
           return updatedContact;
         }
-        // throw new AuthenticationError('You need to be logged in!');
-      // }
+        throw new AuthenticationError('You need to be logged in!');
+     }
       ,
       updatecontactActivity: async (parent, { newActivityInfo, contactId }, context) => {
-        // if (context.user) {
+        if (context.user) {
           const updatedContact = await Contact.findByIdAndUpdate(
             { _id: contactId },
             { $push: { activityInfo: newActivityInfo }},
@@ -104,11 +105,11 @@ const resolvers = {
           );
           return updatedContact;
         }
-        // throw new AuthenticationError('You need to be logged in!');
-    // }
+         throw new AuthenticationError('You need to be logged in!');
+     }
     ,
     addActivity: async (parent, { newActivity }, context) => {
-        // if (context.user) {
+        if (context.user) {
           const activity = await Activity.create({
             type: newActivity.type,
             subject: newActivity.subject,
@@ -119,10 +120,11 @@ const resolvers = {
   
           return activity;
         }
-        //throw AuthenticationError; }
+       throw AuthenticationError;
+       }
     ,  
     addGroup: async (parent, { newGroup }, context) => {
-        // if (context.user) {
+        if (context.user) {
           const group = await Group.create({
             name: newGroup.name,
             description: newGroup.description
@@ -130,38 +132,38 @@ const resolvers = {
             
           return group;
         }
-        // throw AuthenticationError;
-    // }
+        throw AuthenticationError;
+     }
     ,  
     deleteContact: async (parent, { contactid }, context) => {
-      // if (context.user) {
+      if (context.user) {
         const contact = await Contact.findOneAndDelete({
           _id: contactid
         });
         return contact;
       }
-      // throw AuthenticationError;
-    //}
+      throw AuthenticationError;
+    }
     ,
     deleteActivity: async (parent, { activityid }, context) => {
-        // if (context.user) {
+        if (context.user) {
           const activity = await Activity.findOneAndDelete({
             _id: activityid
           });
           return activity;
         }
-        // throw AuthenticationError;
-    // }
+        throw AuthenticationError;
+    }
     ,
     deleteGroup: async (parent, { groupid }, context) => {
-        // if (context.user) {
+        if (context.user) {
           const group = await Group.findOneAndDelete({
             _id: groupid
           });
           return group;
         }
-        // throw AuthenticationError;
-    // }
+         throw AuthenticationError;
+     }
     ,
     
   },

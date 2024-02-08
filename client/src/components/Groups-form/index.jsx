@@ -3,30 +3,39 @@ import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 
 // TODO: ADD MUTATION NAME FORM MUTATION.JS
-import {  } from '../../utils/mutations';
+import { ADD_GROUP } from '../../utils/mutations';
+import { QUERY_GROUPS } from '../../utils/queries';
 
 import Auth from '../../utils/auth';
 
 const GroupsForm = () => {
-    const [GroupText, setGroupText] = useState('');
-    const [characterCount, setCharacterCount] = useState(0);
+    const [ groupName , setGroupName] = useState('');
+    const [ groupDescription , setgroupDescription] = useState('');
+
     // TODO:ADD MUTATION NAME LINE 14
-    const [, { error }] = useMutation();
+    const [ addGroup, { error }] = useMutation
+    (ADD_GROUP, {
+      refetchQueries: [
+        QUERY_GROUPS,
+        'groups',
+      ]
+    });
 
     const handleFormSubmit = async (event) => {
         event.preventDefault();
     
         try {
             // TODO:ADD MUTATION NAME AFTER AWAIT LINE 21
-          const { data } = await ({
+          const { data } = await addGroup ({
             variables: {
-                // TODO:EDIT VARIABLES SECTION HERE LINE 25 29
-              // Run the getProfile() method to get access to the unencrypted token value in order to retrieve the user's username 
-              GroupAuthor: Auth.getProfile().authenticatedPerson.username
+               name: groupName,
+               description: groupDescription
             },
           });
     
-          setMUTATIONNAMEHERE('');
+          setGroupName('');
+          setgroupDescription('');
+
         } catch (err) {
           console.error(err);
         }
@@ -34,9 +43,11 @@ const GroupsForm = () => {
       const handleChange = (event) => {
         const { name, value } = event.target;
     
-        if (name === 'GroupText' && value.length <= 280) {
-          setGroupText(value);
-          setCharacterCount(value.length);
+        if (name === 'groupName') {
+          setGroupName(value);
+        }
+        if (name === 'groupDescription') {
+          setgroupDescription(value);
         }
         };
 
@@ -55,7 +66,7 @@ const GroupsForm = () => {
                         <input
                         placeholder="Group Name"
                         // TODO: ADD VALUE
-                        value={}
+                        value={groupName}
                         onChange={handleChange}
                         >
                         </input>
@@ -65,7 +76,7 @@ const GroupsForm = () => {
                         <input
                         placeholder="Group Description"
                         // TODO: ADD VALUE
-                        value={}
+                        value={groupDescription}
                         onChange={handleChange}
                         >
                         </input>

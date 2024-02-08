@@ -27,7 +27,6 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh; 
-  border: 1px solid mediumblue;
   margin: auto;
 }
 
@@ -35,7 +34,7 @@ header {
   padding: 0 0.25em;
   color: aliceblue;
   align-items: center;
-  border: white solid 10px;
+  border: slategrey solid 3px;
   width: 100%;
 }
 
@@ -47,7 +46,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: white solid 10px;
+  /* border: slategrey solid 10px; */
 }
 
 footer {
@@ -55,7 +54,7 @@ footer {
   padding: 0.25em;
   color: aliceblue;
   display: flex;
-  border: white solid 10px;
+  border: slategrey solid 3px;
 }
 
 .footer-links {
@@ -90,7 +89,6 @@ padding: 10px;
   margin-top: 5px;
   padding: 5px;
   display: flex;
-  border: 2px solid greenyellow;
 }
 
 .m-0 {
@@ -113,23 +111,20 @@ padding: 10px;
   padding: 5px;
 }
 
-.col-12 * {
-  border: 2px solid greenyellow;
-}
 
 .header {
   display: flex;
   align-items: center;
 }
 
-/*
+
 .flex-item span {
   margin: auto;
   font-size: 25px;
   padding: 10px;
 }
 
-/* :root {
+:root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -196,4 +191,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-} */
+}

@@ -31,6 +31,16 @@ const router = createBrowserRouter([
       },  {
         path: '/activities',
         element: <ActivitiesPage />
+      }, {
+        path: '/groups',
+        element: <Groups />
+      },  {
+        path: '/contacts',
+        element: <Contacts />
+      },
+      {
+        path: '/activities',
+        element: <Activities />
       },
     ],
   },

@@ -18,9 +18,6 @@ const Groups = () => {
   }
   return (
     <div className="my-3">
-      <h3 className="card-header bg-dark text-light p-2 m-0">
-        {groups.name}
-      </h3>  
       <div className="my-5">
        <GroupList groups={groups} />
       </div>

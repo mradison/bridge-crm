@@ -29,10 +29,6 @@ const [CountryValue, SetCountry] = useState('');
 const [ZipCodeValue, SetZipCode] = useState('');
 const [WebsiteValue, SetWebsite] = useState('');
 
-const [MessageValue, SetMessage] = useState('');
-
-
-
 const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -45,14 +41,15 @@ const handleSubmit = (e) => {
 
 return (
     <div>
-    <h2 className="contactForm">Contact</h2>
+    <h2>Contact</h2>
+    <p>Fill out the form below</p>
     <form className="contactForm" onSubmit={handleSubmit}>
         <input
         name="Name"
         value={NameValue}
         onChange={(e) => SetName(e.target.value)}
         onBlur={((e) => SetName(e.target.value))}
-        placeholder="Enter Name"
+        placeholder="Name"
         required
         />
 
@@ -61,7 +58,7 @@ return (
         value={NicknameValue}
         onChange={((e) => SetNickname(e.target.value))}
         onBlur={(e) => SetNickname(e.target.value)}
-        placeholder="Enter Nickname"
+        placeholder="Nickname"
         required
         />
         
@@ -70,7 +67,7 @@ return (
         value={EmailValue}
         onChange={((e) => SetEmail(e.target.value))}
         onBlur={(e) => SetEmail(e.target.value)}
-        placeholder="Enter E-mail"
+        placeholder="E-mail"
         required
         />
 
@@ -79,7 +76,7 @@ return (
         value={CompanyNameValue}
         onChange={((e) => SetCompanyName(e.target.value))}
         onBlur={(e) => SetCompanyName(e.target.value)}
-        placeholder="Enter Company Name"
+        placeholder="Company Name"
         required
         />
 
@@ -88,7 +85,7 @@ return (
         value={TitleValue}
         onChange={((e) => SetTitle(e.target.value))}
         onBlur={(e) => SetTitle(e.target.value)}
-        placeholder="Enter Title"
+        placeholder="Title"
         required
         />
 
@@ -97,7 +94,7 @@ return (
         value={DepartmentValue}
         onChange={((e) => SetDepartment(e.target.value))}
         onBlur={(e) => SetDepartment(e.target.value)}
-        placeholder="Enter Department"
+        placeholder="Department"
         required
         />
 
@@ -106,7 +103,7 @@ return (
         value={BusinessPhoneValue}
         onChange={((e) => SetBusinessPhone(e.target.value))}
         onBlur={(e) => SetBusinessPhone(e.target.value)}
-        placeholder="Enter Business Phone Number"
+        placeholder="Business Phone #"
         required
         />
 
@@ -115,7 +112,7 @@ return (
         value={MobilePhoneValue}
         onChange={((e) => SetMobilePhone(e.target.value))}
         onBlur={(e) => SetMobilePhone(e.target.value)}
-        placeholder="Enter Mobile Phone Number"
+        placeholder="Mobile Phone #"
         required
         />
 
@@ -124,7 +121,7 @@ return (
         value={Address1Value}
         onChange={((e) => SetAddress1(e.target.value))}
         onBlur={(e) => SetAddress1(e.target.value)}
-        placeholder="Enter Address 1"
+        placeholder="Address 1"
         required
         />
 
@@ -133,7 +130,7 @@ return (
         value={Address2Value}
         onChange={((e) => SetAddress2(e.target.value))}
         onBlur={(e) => SetAddress2(e.target.value)}
-        placeholder="Enter Address 2"
+        placeholder="Address 2"
         required
         />
 
@@ -142,7 +139,7 @@ return (
         value={CityValue}
         onChange={((e) => SetCity(e.target.value))}
         onBlur={(e) => SetCity(e.target.value)}
-        placeholder="Enter City"
+        placeholder="City"
         required
         />
 
@@ -151,7 +148,7 @@ return (
         value={StateValue}
         onChange={((e) => SetState(e.target.value))}
         onBlur={(e) => SetState(e.target.value)}
-        placeholder="Enter State"
+        placeholder="State"
         required
         />
 
@@ -160,7 +157,7 @@ return (
         value={CountryValue}
         onChange={((e) => SetCountry(e.target.value))}
         onBlur={(e) => SetCountry(e.target.value)}
-        placeholder="Enter Country"
+        placeholder="Country"
         required
         />
 
@@ -169,7 +166,7 @@ return (
         value={ZipCodeValue}
         onChange={((e) => SetZipCode(e.target.value))}
         onBlur={(e) => SetZipCode(e.target.value)}
-        placeholder="Enter Zip Code"
+        placeholder="Zip Code"
         required
         />
 
@@ -178,21 +175,9 @@ return (
         value={WebsiteValue}
         onChange={((e) => SetWebsite(e.target.value))}
         onBlur={(e) => SetWebsite(e.target.value)}
-        placeholder="Enter E-mail"
+        placeholder="E-mail"
         required
         />
-
-        <textarea
-        id="textTyped"
-        placeholder="Write a message here"
-        rows="5"
-        cols="33"
-        name="Message"
-        value={MessageValue}
-        onChange={(e) => SetMessage(e.target.value)}
-        onBlur={((e) => SetMessage(e.target.value))}
-        required
-        ></textarea>
 
         <button type="submit">Submit</button>
         {!IsValid && <p>Please enter a valid email address.</p>}

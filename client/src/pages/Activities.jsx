@@ -18,12 +18,12 @@ const Activities = () => {
   }
   return (
     <div className="my-3">
-      <div className="my-5">
-       <ActivityList activities={activities} />
-      </div>
        <div className="m-3 p-4" style={{ border: '1px dotted #fff' }}>
         <ActivityForm activityid={activities.id} />
       </div> 
+      <div className="my-5">
+       <ActivityList activities={activities} />
+      </div>
     </div>
   );
 };

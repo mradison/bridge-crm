@@ -8,7 +8,7 @@ const Header = () => {
     <header className="header">
       <div className="header">
         <Link className="text-dark" to="/">
-          <h1 className="m-0" style={{ fontSize: "3rem" }}>
+          <h1 className="headerName">
             Bridge CRM
           </h1>
         </Link>

@@ -52,7 +52,8 @@ const Login = (props) => {
                 <Link to="/">back to the homepage.</Link>
               </p>
             ) : (
-              <form onSubmit={handleFormSubmit}>
+              <form className="logInForm"
+              onSubmit={handleFormSubmit}>
                 <input
                   className="form-input"
                   placeholder="Your email"

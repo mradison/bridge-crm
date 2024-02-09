@@ -6,8 +6,8 @@ const ActivityList = ({ activities}) => {
     }
   
     return (
-      <div>
-        <h3 className="p-5 display-inline-block" style={{ borderBottom: '3px dotted #fff' }}>
+      <div className="contactCards">
+        <h3 className="p-5 display-inline-block">
           Activities
         </h3>
         {activities.map((activities) => (

@@ -32,7 +32,12 @@ const Header = () => {
               <Link className="btn btn-lg btn-primary m-2" to="/Activities">
               Activity list
               </Link>
-              </button>                   
+              </button>  
+              <button>
+              <Link className="btn btn-lg btn-primary m-2" to="/SingleActivity">
+              Single Activity
+              </Link>
+              </button>                  
               <button className="btn btn-lg btn-light m-2" onClick={logout}>
                 Logout
               </button>

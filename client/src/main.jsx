@@ -8,10 +8,9 @@ import Homepage from './pages/homepage.jsx';
 import Signup from './pages/Signup.jsx';
 import Groups from './pages/Groups.jsx';
 import Contacts from './pages/Contacts.jsx';
-import Activities from './pages/Activities.jsx';
 import Login from './pages/Login';
 import Error from './pages/Error';
-// import SingleActivity from './pages/SingleActivity.jsx';
+import SingleActivity from './pages/SingleActivity.jsx';
 import ActivitiesPage from './pages/ActivitiesPage.jsx';
 const router = createBrowserRouter([
   {
@@ -39,8 +38,8 @@ const router = createBrowserRouter([
         element: <Contacts />
       },
       {
-        path: '/activities',
-        element: <Activities />
+        path: '/activities/:activityid',
+        element: <SingleActivity />
       },
     ],
   },

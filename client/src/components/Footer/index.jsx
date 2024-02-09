@@ -13,17 +13,6 @@ const Footer = () => {
   return (
     <footer>
       <div className="flex-container">
-        {location.pathname !== "/" && (
-          <button className="btn btn-dark mb-3" onClick={() => navigate(-1)}>
-            &larr; Go Back
-          </button>
-        )}
-        <div className="footer-links">
-          <div className="flex-item"><span>Contact Us</span></div>
-          <div className="flex-item"><span>Careers</span></div>
-          <div className="flex-item"><span>Disclosures</span></div>
-        </div>
-
         <div className="social-logos">
           <span className="logo">
             <a href="">{<img src={FacebookSVG} alt="" />}</a>
@@ -46,6 +35,11 @@ const Footer = () => {
           <span className="logo">
             <a href="">{<img src={youtubeSVG} alt="" />}</a>
           </span>
+        <div className="footer-links">
+          <div className="flex-item"><span>Contact Us</span></div>
+          <div className="flex-item"><span>Careers</span></div>
+          <div className="flex-item"><span>Disclosures</span></div>
+        </div>
         </div>
           <div>
         <h4 className="copyright">&copy; {new Date().getFullYear()} - Bridge CRM</h4>

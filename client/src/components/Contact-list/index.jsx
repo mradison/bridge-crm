@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-function Contactlist({contacts}) => {
+function Contactlist({contacts}) {
     
     if (!contacts.length) {
         return <h3>No contacts Exist</h3>;

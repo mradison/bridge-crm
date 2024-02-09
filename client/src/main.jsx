@@ -11,7 +11,8 @@ import Contacts from './pages/Contacts.jsx';
 import Activities from './pages/Activities.jsx';
 import Login from './pages/Login';
 import Error from './pages/Error';
-
+// import SingleActivity from './pages/SingleActivity.jsx';
+import ActivitiesPage from './pages/ActivitiesPage.jsx';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -27,17 +28,9 @@ const router = createBrowserRouter([
       }, {
         path: '/signup',
         element: <Signup />
-      },{
-        path: '/Groups',
-        element: <Groups />
-      },
-      ,{
-        path: '/Contacts',
-        element: <Contacts />
-      },
-      {
-        path: '/Activities',
-        element: <Activities />
+      },  {
+        path: '/activities',
+        element: <ActivitiesPage />
       },
     ],
   },

@@ -42,8 +42,8 @@ function Contact(prop) {
     
     return (
         <div>
-        <h2 class="contactForm">Contact</h2>
-        <form class="contactForm" onSubmit={handleSubmit}>
+        <h2 className="contactForm">Contact</h2>
+        <form className="contactForm" onSubmit={handleSubmit}>
             <input
             name="Name"
             value={NameValue}

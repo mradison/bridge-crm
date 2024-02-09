@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-import Auth from '../../utils/auth';
+import Auth from "../../utils/auth";
 
 const Header = () => {
   const logout = (event) => {
@@ -8,10 +8,10 @@ const Header = () => {
     Auth.logout();
   };
   return (
-    <header className='header'>
-      <div className='header'>
+    <header className="header">
+      <div className="header">
         <Link className="text-dark" to="/">
-          <h1 className="m-0" style={{ fontSize: '3rem' }}>
+          <h1 className="m-0" style={{ fontSize: "3rem" }}>
             Bridge CRM
           </h1>
         </Link>
@@ -39,18 +39,27 @@ const Header = () => {
             </>
           ) : (
             <>
-            <div class="menuButtons">              
-              <button>
-              <Link className="btn btn-lg btn-primary m-2" to="/login">
-                Login
-              </Link>
-              </button>
-              <button>
-              <Link className="btn btn-lg btn-light m-2" to="/signup">
-                Signup
-              </Link>
-              </button>
-            </div>
+              <div className="menuButtons">
+                <button>Contact list</button>
+                <button>Group list</button>
+
+                <button>
+                  <Link className="btn btn-lg btn-primary m-2" to="/activities">
+                    Activity list
+                  </Link>
+                </button>
+
+                <button>
+                  <Link className="btn btn-lg btn-primary m-2" to="/login">
+                    Login
+                  </Link>
+                </button>
+                <button>
+                  <Link className="btn btn-lg btn-light m-2" to="/signup">
+                    Signup
+                  </Link>
+                </button>
+              </div>
             </>
           )}
         </div>

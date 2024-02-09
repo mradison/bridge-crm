@@ -2,7 +2,7 @@ import { useQuery } from "@apollo/client";
 import { Link } from "react-router-dom";
 
 import ActivityList from "../components/ActivityList";
-import ActivityForm from "../components/ActivityForm";
+//import ActivityForm from "../components/ActivityForm";
 
 import { QUERY_ACTIVITIES } from "../utils/queries";
 

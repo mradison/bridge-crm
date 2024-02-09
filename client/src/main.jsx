@@ -34,7 +34,8 @@ const router = createBrowserRouter([
       }, {
         path: '/groups',
         element: <Groups />
-      },  {
+      },
+         {
         path: '/contacts',
         element: <Contacts />
       },

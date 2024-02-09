@@ -28,8 +28,7 @@ const GroupsForm = () => {
             // TODO:ADD MUTATION NAME AFTER AWAIT LINE 21
           const { data } = await addGroup ({
             variables: {
-               name: groupName,
-               description: groupDescription
+              newGroup: {name: groupName, description: groupDescription}
             },
           });
     
@@ -64,6 +63,7 @@ const GroupsForm = () => {
 
                     <div>
                         <input
+                        name="groupName"
                         placeholder="Group Name"
                         // TODO: ADD VALUE
                         value={groupName}
@@ -74,6 +74,7 @@ const GroupsForm = () => {
 
                     <div>
                         <input
+                        name="groupDescription"
                         placeholder="Group Description"
                         // TODO: ADD VALUE
                         value={groupDescription}
@@ -81,7 +82,11 @@ const GroupsForm = () => {
                         >
                         </input>
                     </div>
-
+                    <div className="col-12 col-lg-3">
+                  <button className="btn btn-primary btn-block py-3" type="submit">
+                    Add Group
+                  </button>
+            </div>
                 </form>
                 </>
                 ) : (

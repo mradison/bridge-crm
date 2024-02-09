@@ -61,7 +61,7 @@ query getSingleContact($contactid: ID!) {
 }`;
 
 export const QUERY_GROUPS = gql`
- {
+{
   groups {
     _id
     name

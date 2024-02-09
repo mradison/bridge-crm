@@ -12,8 +12,7 @@ const Header = () => {
             Bridge CRM
           </h1>
         </Link>
-        </div>
-        
+      </div>        
     </header>
   );
 };

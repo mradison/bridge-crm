@@ -10,8 +10,8 @@ const Groups = () => {
   });
 
   const groups = data?.groups || {};
-  console.log(groups);
-  console.log(data);
+  //console.log(groups);
+  //console.log(data);
 
   if (loading) {
     return <div>Loading...</div>;

@@ -85,7 +85,7 @@ const resolvers = {
     }
       ,    
     updatecontactGroup: async (parent, { newGroupInfo, contactId }, context) => {
-        if (context.user) {
+        // if (context.user) {
           const updatedContact = await Contact.findByIdAndUpdate(
             { _id: contactId },
             { $push: { groupInfo: newGroupInfo }},
@@ -93,8 +93,8 @@ const resolvers = {
           );
           return updatedContact;
         }
-        throw new AuthenticationError('You need to be logged in!');
-     }
+    //     throw new AuthenticationError('You need to be logged in!');
+    //  }
       ,
       updatecontactActivity: async (parent, { newActivityInfo, contactId }, context) => {
         if (context.user) {

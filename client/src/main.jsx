@@ -7,6 +7,7 @@ import App from './App.jsx';
 import Homepage from './pages/homepage.jsx';
 import Signup from './pages/Signup.jsx';
 import Groups from './pages/Groups.jsx';
+import GroupSingle from './pages/GroupSingle.jsx';
 import Contacts from './pages/Contacts.jsx';
 import Login from './pages/Login';
 import Error from './pages/Error';
@@ -33,7 +34,10 @@ const router = createBrowserRouter([
       }, {
         path: '/groups',
         element: <Groups />
-      },  {
+      }, {
+        path: '/groups/:groupid',
+        element: <GroupSingle />
+      }, {
         path: '/contacts',
         element: <Contacts />
       },

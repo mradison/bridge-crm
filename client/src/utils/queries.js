@@ -16,7 +16,7 @@ export const QUERY_USER = gql`
 `;
 
 export const QUERY_CONTACTS = gql`
-query getAllContacts {
+{
   contacts {
     _id
     name

@@ -21,7 +21,6 @@ function Homepage({ TasksValue }) {
                         The full version of this program has all of the features that are on the free tier, except you get the following:  Bragging rights.  Offline installations.  More bragging rights.
                         <br/><Link to='cart'>Click here to buy the full experience!!!!!!!!!  (not really)</Link>
                     </p>
-                    </div>
                 </div>
                 <section className="contentSection">
                 {TasksValue ? <Tasks/> : null}
@@ -29,5 +28,5 @@ function Homepage({ TasksValue }) {
             </div>
         </main>
     );
-}
+};
     export default Homepage;

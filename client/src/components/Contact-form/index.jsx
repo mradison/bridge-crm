@@ -1,7 +1,15 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useMutation } from '@apollo/client';
+
 import emailValidator from 'email-validator';
 
-function Contact(prop) {
+import { QUERY_SINGLE_CONTACT } from '../../utils/mutations';
+import { QUERY_CONTACTS } from '../../utils/queries';
+
+import Auth from '../../utils/auth';
+
+function Contact(props) {
 const [NameValue, SetName] = useState('');
 const [NicknameValue, SetNickname] =useState('');
 const [EmailValue, SetEmail] = useState('');

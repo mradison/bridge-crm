@@ -1,9 +1,30 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import { useMutation } from "@apollo/client";
+import { Link } from 'react-router-dom';
 
-import {  } from '../../utils/mutations';
+const Grouplist = ({groups}) => {
+    //console.log(props);
+  if (!groups.length) {
+    return <h3>No Groups Exist</h3>;
+  }
 
-import Auth from '../../utils/auth';
+  return (
+    <div>     
+      {groups.map((groups) => (
+          <div key={groups._id} className="card mb-3">
+            <h4 className="card-header bg-primary text-light p-2 m-0">              
+                  {groups.name} <br /> 
+            </h4>
+            <div className="card-body bg-light p-2">
+              <p>{groups.description}</p>
+            </div>
+            <Link
+              className="btn btn-primary btn-block btn-squared"
+              to={`/Groups/${groups._id}`}
+            >View Group
+            </Link>
+          </div>
+        ))}
+    </div>
+  );
+};
 
-export default Group-list;
+export default Grouplist;

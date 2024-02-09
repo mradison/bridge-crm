@@ -61,7 +61,7 @@ query getSingleContact($contactid: ID!) {
 }`;
 
 export const QUERY_GROUPS = gql`
-query getGroups {
+ {
   groups {
     _id
     name
@@ -79,7 +79,7 @@ query getSingleGroup($groupid: ID!) {
 }`;
 
 export const QUERY_ACTIVITIES = gql`
-query getActivities {
+ {
   activities {
     _id
     type

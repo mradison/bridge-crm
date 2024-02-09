@@ -8,13 +8,13 @@ import Auth from '../../utils/auth';
 
 function Contact(prop) {
     const [NameValue, SetName] = useState('');
-    const [Nickname, SetNickname] =useState('');
+    const [NicknameValue, SetNickname] =useState('');
     const [EmailValue, SetEmail] = useState('');
     
     const [IsValid, SetIsValid] = useState(true);
     
     const [CompanyNameValue, SetCompanyName] = useState('');
-    const [TitleValue, SetTile] = useState('');
+    const [TitleValue, SetTitle] = useState('');
     const [DepartmentValue, SetDepartment] = useState('');
     const [BusinessPhoneValue, SetBusinessPhone] = useState('');
     const [MobilePhoneValue, SetMobilePhone] = useState('');
@@ -199,4 +199,4 @@ function Contact(prop) {
     }
     
 
-export default Contact-list;
+export default Contact;

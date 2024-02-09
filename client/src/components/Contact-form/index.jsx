@@ -3,7 +3,7 @@ import emailValidator from 'email-validator';
 
 function Contact(prop) {
 const [NameValue, SetName] = useState('');
-const [Nickname, SetNickname] =useState('');
+const [NicknameValue, SetNickname] =useState('');
 const [EmailValue, SetEmail] = useState('');
 
 const [IsValid, SetIsValid] = useState(true);

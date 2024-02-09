@@ -4,8 +4,8 @@ import { useMutation } from '@apollo/client';
 
 import emailValidator from 'email-validator';
 
-import { QUERY_SINGLE_CONTACT } from '../../utils/mutations';
-import { QUERY_CONTACTS } from '../../utils/queries';
+// import { QUERY_SINGLE_CONTACT } from '../../utils/mutations';
+// import { QUERY_CONTACTS } from '../../utils/queries';
 
 import Auth from '../../utils/auth';
 

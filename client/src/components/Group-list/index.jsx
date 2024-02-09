@@ -18,7 +18,7 @@ const Grouplist = ({groups}) => {
             </div>
             <Link
               className="btn btn-primary btn-block btn-squared"
-              to={`/Groups/${groups._id}`}
+              to={`/groups/${groups._id}`}
             >View Group
             </Link>
           </div>

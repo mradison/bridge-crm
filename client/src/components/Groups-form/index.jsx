@@ -58,7 +58,7 @@ const GroupsForm = () => {
                 <>
                 <form onSubmit={handleFormSubmit}>
                     <div>
-                        <label for="Groups">Group</label>
+                        <label htmlFor="Groups">Group</label>
                     </div>
 
                     <div>

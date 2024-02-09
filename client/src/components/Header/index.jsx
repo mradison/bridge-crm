@@ -39,16 +39,7 @@ const Header = () => {
             </>
           ) : (
             <>
-              <div className="menuButtons">
-                <button>Contact list</button>
-                <button>Group list</button>
-
-                <button>
-                  <Link className="btn btn-lg btn-primary m-2" to="/activities">
-                    Activity list
-                  </Link>
-                </button>
-
+              <div className="menuButtons">                
                 <button>
                   <Link className="btn btn-lg btn-primary m-2" to="/login">
                     Login

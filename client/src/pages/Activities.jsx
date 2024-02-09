@@ -1,6 +1,6 @@
 import { useQuery } from '@apollo/client';
 
-import ActivityList from '../components/Activity-list';
+import ActivityList from '../components/Activitylist';
 import ActivityForm from '../components/Activity-form';
 
 import { QUERY_ACTIVITIES } from '../utils/queries';

@@ -22,7 +22,7 @@ function Homepage({ TasksValue }) {
                         <br/><Link to='cart'>Click here to buy the full experience!!!!!!!!!  (not really)</Link>
                     </p>
                     </div>
-                
+                </div>
                 <section className="contentSection">
                 {TasksValue ? <Tasks/> : null}
                 </section>

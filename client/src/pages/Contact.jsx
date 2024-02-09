@@ -29,7 +29,7 @@ const SingleContact = () => {
         <div className="my-5">
         <ContactList contacts={contact.contacts} />
         </div>
-        <div className="m-3 p-4" style={{ border: '1px dotted #1a1a1a' }}>
+        <div className='fillOutFormSection'>
         <ContactForm 
         contactid={contact._id} 
         />

@@ -47,10 +47,26 @@ nav {
   height: 80%;
   display: flex;
   color: white;
-  flex-direction: column;
-  justify-content: center;
+  /* flex-direction: column; */
+  /* justify-content: center; */
   align-items: center;
   /* border: slategrey solid 10px; */
+}
+
+.homepagelayout {
+  display: flex;
+  flex-direction: row;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contactCards {
+  display: flex;
+  flex-direction: row;
 }
 
 footer {

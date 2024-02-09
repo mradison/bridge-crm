@@ -21,12 +21,12 @@ const Contacts = () => {
       <h3 className="card-header bg-dark text-light p-2 m-0">
         {contacts.name}       
       </h3>  
-      <div className="my-5">
-       <ContactList contacts={contacts} />
-      </div>
        <div className="m-3 p-4" style={{ border: '1px dotted #1a1a1a' }}>
         <ContactForm contactid={contacts._id} />
       </div> 
+      <div className="my-5">
+       <ContactList contacts={contacts} />
+      </div>
     </div>
   );
 };

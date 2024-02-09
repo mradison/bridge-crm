@@ -7,19 +7,22 @@ function Homepage({ TasksValue }) {
 
     return(
         <main className='main'>
-            <div>
                 <h1>Bridge CRM</h1>
                 <h3>The working person's customer management tool</h3>
+            <div className='homepageLayout'>
                 <div className='leftColumn'>
                     {/* todo: make this look pretty*/}
-                    <p>Sign up to start the free experience!  From here you can create or modify your contacts, put them into groups, and add your activities all online in your own personal environment.
-                        <br/><Link to='signup'>Click here to sign up for free!</Link>
+                    <p>
+                        Sign up to start the free experience!  From here you can create or modify your contacts, put them into groups, and add your activities all online in your own personal environment.
+                        <br/>
+                        <Link to='signup'>Click here to sign up for free!</Link>
                     </p>
                     </div>
                 <div className='rightColumn'>
                     <p>
                         The full version of this program has all of the features that are on the free tier, except you get the following:  Bragging rights.  Offline installations.  More bragging rights.
-                        <br/><Link to='cart'>Click here to buy the full experience!!!!!!!!!  (not really)</Link>
+                        <br/>
+                        <Link to='cart'>Click here to buy the full experience!!!!!!!!!  (not really)</Link>
                     </p>
                 </div>
                 <section className="contentSection">

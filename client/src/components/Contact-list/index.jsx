@@ -7,9 +7,10 @@ function Contactlist({contacts}) {
     }
     
     return (
-        <div className="contactCards">
+      <div className="contactCards">
+          <h3>Contacts</h3>
         {contacts.map((contacts) => (
-            <div key={contacts._id} className="card mb-3">
+          <div key={contacts._id} className="card mb-3">
               <h4 className="card-header bg-primary text-light p-2 m-0">              
                     {contacts.name} <br /> 
               </h4>
@@ -21,7 +22,7 @@ function Contactlist({contacts}) {
               <Link
                 className="btn btn-primary btn-block btn-squared"
                 to={`/Contacts/${contacts._id}`}
-              >View Contact
+                >View Contact
               </Link>
             </div>
           ))}

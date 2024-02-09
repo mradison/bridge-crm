@@ -7,10 +7,11 @@ const Grouplist = ({groups}) => {
   }
 
   return (
-    <div>     
+    <div className="contactCards">  
+      <h3>Groups</h3>
       {groups.map((groups) => (
           <div key={groups._id} className="card mb-3">
-            <h4 className="card-header bg-primary text-light p-2 m-0">              
+            <h4 className="card-header bg-primary text-light p-2">              
                   {groups.name} <br /> 
             </h4>
             <div className="card-body bg-light p-2">

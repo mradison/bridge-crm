@@ -51,7 +51,8 @@ const Signup = () => {
                 <Link to="/">back to the homepage.</Link>
               </p>
             ) : (
-              <form onSubmit={handleFormSubmit}>
+              <form className="signUpForm"
+              onSubmit={handleFormSubmit}>
                 <input
                   className="form-input"
                   placeholder="Your username"

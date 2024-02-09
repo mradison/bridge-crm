@@ -8,7 +8,8 @@ import Homepage from './pages/homepage.jsx';
 import Signup from './pages/Signup.jsx';
 import Login from './pages/Login';
 import Error from './pages/Error';
-
+// import SingleActivity from './pages/SingleActivity.jsx';
+import ActivitiesPage from './pages/ActivitiesPage.jsx';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -24,6 +25,9 @@ const router = createBrowserRouter([
       }, {
         path: '/signup',
         element: <Signup />
+      },  {
+        path: '/activities',
+        element: <ActivitiesPage />
       },
     ],
   },

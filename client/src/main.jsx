@@ -22,13 +22,13 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Homepage />,
-      },{
+      }, {
         path: '/login',
         element: <Login />
       }, {
         path: '/signup',
         element: <Signup />
-      },  {
+      }, {
         path: '/activities',
         element: <ActivitiesPage />
       }, {
@@ -40,11 +40,10 @@ const router = createBrowserRouter([
       }, {
         path: '/contacts',
         element: <Contacts />
-      },
-      {
+      }, {
         path: '/activities/:activityid',
         element: <SingleActivity />
-      },
+      }
     ],
   },
 ]);

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Auth from "../../utils/auth";
-
+import InstallButton from "../../pages/InstallButton";
 const Navbar = () => {
     const logout = (event) => {
         event.preventDefault();
@@ -36,7 +36,10 @@ const Navbar = () => {
                                         Activity list
                                     </button>
                                 </Link>
-                                    <button className="btn btn-lg btn-light m-2" onClick={logout}>Logout</button>
+                                    <button className="btn btn-lg btn-light m-2" onClick={logout}>
+                                        Logout
+                                    </button>
+                                    <InstallButton />
                             </div>
                         </>
                     ) : (

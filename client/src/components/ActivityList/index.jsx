@@ -6,10 +6,12 @@ const ActivityList = ({ activities}) => {
     }
   
     return (
+      <div>
+        <br />
+      <h3 className="activitiesTitle display-inline-block text-underline">
+      Activities
+    </h3>
       <div className="contactCards">
-        <h3 className="p-5 display-inline-block">
-          Activities
-        </h3>
         {activities.map((activities) => (
         <div key={activities._id} className="card mb-1">
           <div className="card-body bg-light p-1">
@@ -25,6 +27,7 @@ const ActivityList = ({ activities}) => {
           </Link>
         </div>
       ))}
+      </div>
       </div>
     );
   };

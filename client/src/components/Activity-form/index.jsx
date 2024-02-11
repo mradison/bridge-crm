@@ -32,8 +32,6 @@ const ActivityForm = () => {
           activityType, subject:
           activitySubject, description:
           activityDescription}
-          // activityDate,
-          // activityAuthor: Auth.getProfile().data.username,
         },
       });
 
@@ -65,15 +63,12 @@ const ActivityForm = () => {
 
   return (
     <div>
-      <h3>Fill out Activity form below </h3>
+      <h3>Create an activity below: </h3>
 
       {Auth.loggedIn() ? (
         <>
           <form onSubmit={handleFormSubmit}>
-            <div>
-              <label htmlFor="Activities">Activity</label>
-            </div>
-
+            <br />
             <div>
                         <input
                         name="activityType"
@@ -98,13 +93,12 @@ const ActivityForm = () => {
                         <input
                         name="activityDescription"
                         placeholder="Activity Description"
-                        // TODO: ADD VALUE
                         value={activityDescription}
                         onChange={handleChange}
                         >
                         </input>
                     </div>
-
+                    <br />
                     <div className="col-12 col-lg-3">
                   <button className="btn btn-primary btn-block py-3" type="submit">
                     Add Activity

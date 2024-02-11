@@ -7,8 +7,7 @@ import { UPDATE_CONTACT_GROUP } from '../../utils/mutations';
 
 const Contactdropdown = ({group}) => {
   let [contactid, setContactid] = useState("Select")
-  let [groupName, setGroupName] = useState()
-  let [groupDescription, setgroupDescription] = useState()
+  let [savesuccessfull, setsavesuccessfull] = useState()
 
   console.log(group);
  
@@ -20,6 +19,7 @@ const Contactdropdown = ({group}) => {
 
     console.log(e.target.value);
     setContactid(e.target.value)
+    setsavesuccessfull('')
   }
 
   const handleFormSubmit = async (event) => {
@@ -33,7 +33,7 @@ const Contactdropdown = ({group}) => {
       });
     
     setContactid('');
-
+    setsavesuccessfull('Contact Associated')
     } catch (err) {
       console.error(err);
     }
@@ -70,7 +70,9 @@ const Contactdropdown = ({group}) => {
 
     <button className="btn btn-primary btn-block py-3" type="submit">
                     Associate Group
-                  </button>
+   </button>
+   <br />
+   {savesuccessfull}
     </div>
     <br />
     </div>

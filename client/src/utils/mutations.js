@@ -129,7 +129,7 @@ export const UPDATE_CONTACT_ACTIVITY = gql`
 
 export const DELETE_CONTACT = gql`
   mutation deleteContact($contactId: ID!) {
-    deleteContact(contactId: $contactId) {
+    deleteContact(contactid: $contactId) {
       _id
       name
       nickname
@@ -152,7 +152,7 @@ export const DELETE_CONTACT = gql`
 
 export const DELETE_GROUP = gql`
   mutation deleteGroup($groupId: ID!) {
-    deleteGroup(groupId: $groupId) {
+    deleteGroup(groupid: $groupId) {
       _id
       name
       description
@@ -162,12 +162,57 @@ export const DELETE_GROUP = gql`
 
 export const DELETE_ACTIVITY = gql`
   mutation deleteActivity($activityId: ID!) {
-    deleteActivity(activityId: $activityId) {
+    deleteActivity(activityid: $activityId) {
       _id
       type
       subject
       description
       activitydate
+    }
+  }
+`;
+
+export const UPDATE_CONTACT = gql`
+  mutation updateContactInfo($newContactInfo: inputcontactInfo!, $groupId: ID!) {
+    updateContactInfo(newContactInfo: $newContactInfo, groupid: $groupId) {
+      _id
+      name
+      nickname
+      email
+      company
+      title
+      department
+      businessphone
+      mobilephone
+      address1
+      address2
+      city
+      state
+      country
+      zip
+      website  
+    }
+  }
+`;
+
+export const UPDATE_ACTIVITY = gql`
+  mutation updateActivityInfo($newActivityInfo: inputactivityInfo!, $groupId: ID!) {
+    updateActivityInfo(newActivityInfo: $newActivityInfo, groupid: $groupId) {
+      _id
+      type
+      subject
+      description
+      activitydate  
+    }
+  }
+`;
+
+export const UPDATE_GROUP = gql`
+  mutation updateGroupInfo($newGroupInfo: inputgroupInfo!, $groupId: ID!) {
+    updateGroupInfo(newGroupInfo: $newGroupInfo, groupid: $groupId) {
+        _id
+        name
+        description     
     }
   }
 `;

@@ -85,7 +85,7 @@ const resolvers = {
     }
       ,    
     updatecontactGroup: async (parent, { newGroupInfo, contactId }, context) => {
-        // if (context.user) {
+        if (context.user) {
           const updatedContact = await Contact.findByIdAndUpdate(
             { _id: contactId },
             { $push: { groupInfo: newGroupInfo }},
@@ -93,8 +93,8 @@ const resolvers = {
           );
           return updatedContact;
         }
-    //     throw new AuthenticationError('You need to be logged in!');
-    //  }
+        throw new AuthenticationError('You need to be logged in!');
+     }
       ,
       updatecontactActivity: async (parent, { newActivityInfo, contactId }, context) => {
         if (context.user) {
@@ -139,7 +139,9 @@ const resolvers = {
       if (context.user) {
         const contact = await Contact.findOneAndDelete({
           _id: contactid
-        });
+        },
+        { new: true });
+     
         return contact;
       }
       throw AuthenticationError;
@@ -149,7 +151,8 @@ const resolvers = {
         if (context.user) {
           const activity = await Activity.findOneAndDelete({
             _id: activityid
-          });
+          },
+          { new: true });
           return activity;
         }
         throw AuthenticationError;
@@ -159,12 +162,63 @@ const resolvers = {
         if (context.user) {
           const group = await Group.findOneAndDelete({
             _id: groupid
-          });
+          },
+          { new: true });
           return group;
         }
          throw AuthenticationError;
      }
     ,
+    updateContactInfo: async (parent, { newContactInfo, activityid }, context) => {
+      if (context.user) {
+        const updateContact = await Contact.findByIdAndUpdate(activityid,
+          { 
+          name: newContactInfo.name,
+          nickname: newContactInfo.nickname,
+          email: newContactInfo.email,
+          company: newContactInfo.company,
+          title: newContactInfo.title,
+          department: newContactInfo.department,
+          businessphone: newContactInfo.businessphone,
+          mobilephone: newContactInfo.mobilephone,
+          address1: newContactInfo.address1,
+          address2: newContactInfo.address2,
+          city: newContactInfo.city,
+          state: newContactInfo.state,
+          country: newContactInfo.country,
+          zip: newContactInfo.zip,
+          website: newContactInfo.website},
+          { new: true }
+        );
+        return updateContact;
+      }
+       throw new AuthenticationError('You need to be logged in!');
+   }
+      ,
+    updateActivityInfo: async (parent, { newActivityInfo, activityid }, context) => {
+      if (context.user) {
+        const updateActivity = await Activity.findByIdAndUpdate( activityid,
+          { type: newActivityInfo.type,
+            subject: newActivityInfo.subject,
+            description: newActivityInfo.description,
+            activitydate: newActivityInfo.activitydate},
+          { new: true }
+        );
+        return updateActivity;
+      }
+       throw new AuthenticationError('You need to be logged in!');
+   }
+      ,
+      updateGroupInfo: async (parent, {newGroupInfo, groupid }, context) => {
+        if (context.user) {
+          const updateGroup = await Group.findByIdAndUpdate(groupid,
+            {name: newGroupInfo.name, description: newGroupInfo.description} ,    
+            { new: true }
+          );
+          return updateGroup;
+        }
+        throw new AuthenticationError('You need to be logged in!');  
+   } 
     
   },
 };

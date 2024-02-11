@@ -1,10 +1,29 @@
 import { Link } from 'react-router-dom';
+import { useMutation } from '@apollo/client';
+import { DELETE_GROUP } from '../../utils/mutations';
 
 const Grouplist = ({groups}) => {
     //console.log(props);
   if (!groups.length) {
     return <h3>No Groups Exist</h3>;
   }
+
+  const[ deleteGroup ] = useMutation( DELETE_GROUP )
+
+  const handleDeleteGroup = async (groupId) => {
+    
+    try {
+      await deleteGroup({
+        variables: {
+          groupId
+        },
+       
+      });     
+     
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
   return (
     <div>
@@ -30,10 +49,10 @@ const Grouplist = ({groups}) => {
             </div>
             <br />
             <div>
-            <select name="Edit" id="Edit"> 
-              <option>Update</option>
-              <option>Delete</option>
-            </select>
+            <button className="btn btn-primary btn-block py-3"  onClick={() => handleDeleteGroup(groups._id)}>
+                      Delete this Group!
+                    </button>
+            
             </div>
           </div>
         ))}

@@ -26,6 +26,7 @@ const SingleActivity = () => {
   }
 
   return (
+    <div>
     <div className="my-3">
       <div className="my-5">
         {activity.name} <br />
@@ -36,10 +37,7 @@ const SingleActivity = () => {
       <div>
         <br />
       </div>
-      Associate Contact to Activity:
-      <Contactdropdown activity={activity} />
     </div>
-
     <div style={{ margin: '15px' }}>
     Associate Contact to Activity:
     <div style={{ margin: '15px' }}>

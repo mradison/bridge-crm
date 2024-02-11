@@ -21,16 +21,22 @@ const Groupsingle = () => {
     return <div>Loading...</div>;
   }
   return (
-
+    <div>
+      <br />
     <div className="my-3">
-      <div className="my-5">
+      <div className="my-5" style={{ borderBottom: "2px solid" }}>
       {group.name} <br />
       </div>
-       <div className="m-3 p-4" style={{ border: '1px dotted #1a1a1a' }}>
+      <br />
+       <div className="m-3 p-4">
        {group.description} <br />
       </div> 
+      <br />
+      <div>
       Associate Contact to Group: 
+      </div>
       <Contactdropdown group={group}/>
+    </div>
     </div>
   );
 };

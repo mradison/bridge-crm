@@ -20,15 +20,21 @@ const Grouplist = ({groups}) => {
             <div className="card-body bg-light p-2">
               <p>{groups.description}</p>
             </div>
+            <br />
+            <div>
             <Link
               className="btn btn-primary btn-block btn-squared"
               to={`/groups/${groups._id}`}
             >View Group
             </Link>
+            </div>
+            <br />
+            <div>
             <select name="Edit" id="Edit"> 
               <option>Update</option>
               <option>Delete</option>
             </select>
+            </div>
           </div>
         ))}
     </div>

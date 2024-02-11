@@ -114,6 +114,9 @@ const typeDefs = `
     deleteContact(contactid: ID!): Contact 
     deleteActivity(activityid: ID!): Activity
     deleteGroup(groupid: ID!): Group
+    updateContactInfo(newContactInfo: inputcontactInfo, contactid: ID!): Contact 
+    updateActivityInfo(newActivityInfo: inputactivityInfo, activityid: ID!): Activity
+    updateGroupInfo(newGroupInfo: inputgroupInfo, groupid: ID!): Group
   }
 `;
 

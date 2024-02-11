@@ -60,9 +60,14 @@ const Contactdropdown = ({group}) => {
          
       {contacts.map((contact) => <option key={contact._id} value={contact._id}>{contact.name}</option>)}
     </select>
+
     <div>
       <br />
     </div>
+
+    <br />
+    <br />
+
     <button className="btn btn-primary btn-block py-3" type="submit">
                     Associate Group
                   </button>

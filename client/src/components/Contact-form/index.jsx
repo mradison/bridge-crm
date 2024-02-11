@@ -42,7 +42,9 @@ const handleSubmit = (e) => {
 return (
     <div>
     <h2>Contact</h2>
+    <br />
     <p>Fill out the form below</p>
+    <br />
     <form className="contactForm" onSubmit={handleSubmit}>
         <input
         name="Name"
@@ -178,8 +180,9 @@ return (
         placeholder="E-mail"
         required
         />
-
+        <br />
         <button type="submit">Submit</button>
+        <br />
         {!IsValid && <p>Please enter a valid email address.</p>}
     </form>
     </div>

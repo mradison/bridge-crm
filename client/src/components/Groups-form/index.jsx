@@ -53,6 +53,7 @@ const GroupsForm = () => {
     return (
         <div>
             <h3> Fill out Group form below </h3>
+            <br />
 
             {Auth.loggedIn() ? (
                 <>
@@ -60,6 +61,7 @@ const GroupsForm = () => {
                     <div>
                         <label htmlFor="Groups">Group</label>
                     </div>
+                    <br />
 
                     <div>
                         <input
@@ -84,6 +86,7 @@ const GroupsForm = () => {
                     </div>
                     
                     <div className="col-12 col-lg-3">
+                      <br />
                   <button className="btn btn-primary btn-block py-3" type="submit">
                     Add Group
                   </button>

@@ -35,8 +35,12 @@ const SingleActivity = () => {
      <div className="m-3 p-4" style={{ border: '1px dotted #fff' }}>
      {activity.description} <br />
     </div>
+    <div style={{ margin: '15px' }}>
     Associate Contact to Activity:
+    <div style={{ margin: '15px' }}>
     <Contactdropdown activity={activity}/>
+    </div>
+    </div>
   </div>
   );
 };

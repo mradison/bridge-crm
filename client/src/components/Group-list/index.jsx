@@ -7,8 +7,11 @@ const Grouplist = ({groups}) => {
   }
 
   return (
+    <div>
+      <br />
+       <h3 className="activitiesTitle display-inline-block text-underline">Groups</h3>
     <div className="contactCards">  
-      <h3>Groups</h3>
+
       {groups.map((groups) => (
           <div key={groups._id} className="card mb-3">
             <h4 className="card-header bg-primary text-light p-2">              
@@ -24,6 +27,7 @@ const Grouplist = ({groups}) => {
             </Link>
           </div>
         ))}
+    </div>
     </div>
   );
 };

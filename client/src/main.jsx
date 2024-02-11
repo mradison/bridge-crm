@@ -8,6 +8,7 @@ import Homepage from './pages/homepage.jsx';
 import Signup from './pages/Signup.jsx';
 import Groups from './pages/Groups.jsx';
 import GroupSingle from './pages/GroupSingle.jsx';
+import SingleContact from './pages/SingleContact.jsx';
 import Contacts from './pages/Contacts.jsx';
 import Login from './pages/Login';
 import Error from './pages/Error';
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
       }, {
         path: '/activities/:activityid',
         element: <SingleActivity />
+      }, 
+      {
+        path: '/contacts/:contactid',
+        element: <SingleContact />
       }
     ],
   },

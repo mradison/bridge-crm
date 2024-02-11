@@ -52,16 +52,22 @@ const Contactdropdown = ({group}) => {
 
   return (
     <form onSubmit={handleFormSubmit}>
+      <div>
+        <br />
     <div>    
       <select onChange={handleContactChange}> 
       <option value="Select"> -- Select a Contact -- </option>
          
       {contacts.map((contact) => <option key={contact._id} value={contact._id}>{contact.name}</option>)}
     </select>
-    <br />
+    <div>
+      <br />
+    </div>
     <button className="btn btn-primary btn-block py-3" type="submit">
                     Associate Group
                   </button>
+    </div>
+    <br />
     </div>
     </form>
   );

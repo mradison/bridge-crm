@@ -24,6 +24,10 @@ function Contactlist({contacts}) {
                 to={`/Contacts/${contacts._id}`}
                 >View Contact
               </Link>
+              <select name="Edit" id="Edit"> 
+              <option>Update</option>
+              <option>Delete</option>
+            </select>
             </div>
           ))}
         </div>

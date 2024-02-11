@@ -25,6 +25,10 @@ const Grouplist = ({groups}) => {
               to={`/groups/${groups._id}`}
             >View Group
             </Link>
+            <select name="Edit" id="Edit"> 
+              <option>Update</option>
+              <option>Delete</option>
+            </select>
           </div>
         ))}
     </div>

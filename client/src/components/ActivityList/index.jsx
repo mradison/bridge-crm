@@ -25,6 +25,10 @@ const ActivityList = ({ activities}) => {
           to={`/activities/${activities._id}`}
           >View Activity  
           </Link>
+          <select name="Edit" id="Edit"> 
+              <option>Update</option>
+              <option>Delete</option>
+            </select>
         </div>
       ))}
       </div>

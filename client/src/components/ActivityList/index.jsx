@@ -20,15 +20,21 @@ const ActivityList = ({ activities}) => {
             <p>{activities.subject}</p>
             <p>{activities.type}</p>
           </div>
+          <br />
+          <div>
           <Link
           className="btn btn-primary btn-block btn-squared"
           to={`/activities/${activities._id}`}
           >View Activity  
           </Link>
+          </div>
+          <br />
+          <div>
           <select name="Edit" id="Edit"> 
               <option>Update</option>
               <option>Delete</option>
             </select>
+            </div>
         </div>
       ))}
       </div>

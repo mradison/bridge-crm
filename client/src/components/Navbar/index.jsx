@@ -10,13 +10,13 @@ const Navbar = () => {
     return(
         <>
             <nav>
-                <div className="goBackBtn">
+                {/* <div className="goBackBtn">
                     {location.pathname !== "/" && (
                     <button className="btn btn-dark mb-3" onClick={() => navigate(-1)}>
                         &larr; Go Back
                     </button>
                     )}
-                </div>
+                </div> */}
                 <div className="3btn">
                     {Auth.loggedIn() ? (
                         <>

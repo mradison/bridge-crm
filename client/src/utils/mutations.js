@@ -173,8 +173,8 @@ export const DELETE_ACTIVITY = gql`
 `;
 
 export const UPDATE_CONTACT = gql`
-  mutation updateContactInfo($newContactInfo: inputcontactInfo!, $groupId: ID!) {
-    updateContactInfo(newContactInfo: $newContactInfo, groupid: $groupId) {
+  mutation updateContactInfo($newContactInfo: inputcontactInfo!, $contactId: ID!) {
+    updateContactInfo(newContactInfo: $newContactInfo, contactid: $contactId) {
       _id
       name
       nickname
@@ -196,8 +196,8 @@ export const UPDATE_CONTACT = gql`
 `;
 
 export const UPDATE_ACTIVITY = gql`
-  mutation updateActivityInfo($newActivityInfo: inputactivityInfo!, $groupId: ID!) {
-    updateActivityInfo(newActivityInfo: $newActivityInfo, groupid: $groupId) {
+  mutation updateActivityInfo($newActivityInfo: inputactivityInfo!, $activityId: ID!) {
+    updateActivityInfo(newActivityInfo: $newActivityInfo, activityid: $activityId) {
       _id
       type
       subject

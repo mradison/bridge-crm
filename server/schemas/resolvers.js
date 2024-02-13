@@ -169,9 +169,9 @@ const resolvers = {
          throw AuthenticationError;
      }
     ,
-    updateContactInfo: async (parent, { newContactInfo, activityid }, context) => {
+    updateContactInfo: async (parent, { newContactInfo, contactid }, context) => {
       if (context.user) {
-        const updateContact = await Contact.findByIdAndUpdate(activityid,
+        const updateContact = await Contact.findByIdAndUpdate(contactid,
           { 
           name: newContactInfo.name,
           nickname: newContactInfo.nickname,

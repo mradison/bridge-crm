@@ -1,12 +1,8 @@
 # bridge-crm
 
 ## Badges
-[![Netlify Status](https://api.netlify.com/api/v1/badges/f0067f5a-2f56-484b-acaa-d9b3686a947d/deploy-status)](https://app.netlify.com/sites/Bridge-crmector/deploys)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-![alt text](https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=apple&logoColor=white)
 ![alt text](https://img.shields.io/badge/Edx-193A3E?style=for-the-badge&logo=edx&logoColor=white)
-
-![alt text](https://img.shields.io/badge/prettier-1A2C34?style=for-the-badge&logo=prettier&logoColor=F7BA3E)
 
 ![alt text](https://img.shields.io/badge/HTML5-E34F26.svg?style=for-the-badge&logo=HTML5&logoColor=white)
 ![alt text](https://img.shields.io/badge/CSS3-1572B6.svg?style=for-the-badge&logo=CSS3&logoColor=white)
@@ -15,14 +11,13 @@
 
 ![alt text](https://img.shields.io/badge/npm-CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)
 ![alt text](https://img.shields.io/badge/Vite-646CFF.svg?style=for-the-badge&logo=Vite&logoColor=white)
-![alt text](https://img.shields.io/badge/Nodemon-76D04B.svg?style=for-the-badge&logo=Nodemon&logoColor=white)
-
 
 
 
 ## Description
 
-add description here
+Bridge-CRM is a tool that helps  clients manage and store their customer’s data facilitating  great customer service. It also has the potential for key capabilities like sales, marketing and analytics.
+
 
 ## Table of Contents
 
@@ -47,8 +42,13 @@ cd Bridge-crm
 
 npm install 
 
-npm start
+open the package.json from the server folder in the terminal 
 
+npm run start
+
+open the package.json from the client folder in the terminal
+
+npm run dev
 ```
 
 In your browser, navigate to http://localhost:3001/
@@ -59,12 +59,16 @@ In your browser, navigate to http://localhost:3001/
 Open the application here: https://github.com/mradison/bridge-crm
 
 Log in or create a new account.
+<img width="574" alt="Screenshot 2024-02-12 at 8 55 34 PM" src="https://github.com/mradison/bridge-crm/assets/141383937/f6cb6c7d-4f63-4ee8-a32d-bbabd06e878f">
 
-< Insert picture >
+<img width="550" alt="Screenshot 2024-02-12 at 8 55 45 PM" src="https://github.com/mradison/bridge-crm/assets/141383937/af2b1b3d-fb01-4c09-8e6c-3bafd50aece0">
+
+
 
 Once you have logged in, navigate to .
 
-< Insert picture >
+<img width="733" alt="Screenshot 2024-02-12 at 8 57 56 PM" src="https://github.com/mradison/bridge-crm/assets/141383937/831ce60d-a02e-49b9-be4a-ff4d664a721f">
+
 
 
 ## Deployed Application

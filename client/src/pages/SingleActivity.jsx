@@ -125,7 +125,6 @@ const SingleActivity = () => {
     <Contactdropdown activity={activity}/>
     </div>
     </div>
-  </div>
   </main>
   );
 };

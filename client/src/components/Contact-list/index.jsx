@@ -41,6 +41,8 @@ const Contactlist = ({ contacts }) => {
             <p>{contacts.nickname}</p>
             <p>{contacts.businessphone}</p>
             <p>{contacts.email}</p>
+            <p>{contacts.group}</p>
+            <p>{contacts.activity}</p>
           </div>
           <div>
           <Link

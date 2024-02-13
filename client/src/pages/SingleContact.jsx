@@ -19,6 +19,7 @@ const SingleContact = () => {
     return <div>Loading...</div>;
   }
   return (
+    <main>
     <div className="my-3">
       <br />
       <div className="my-5" style={{ borderBottom: "2px solid" }}>
@@ -69,6 +70,7 @@ const SingleContact = () => {
       </div>
       <br />
     </div>
+    </main>
   );
 };
 

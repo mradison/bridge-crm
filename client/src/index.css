@@ -26,6 +26,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.my-5 {
+  display: flex;
+  justify-content: center;
+}
+
+.card mb-3 {
+  padding: 10px;
+}
+
 .App {
   /* display: flex; */
   flex-direction: column;
@@ -47,7 +56,7 @@ nav {
   justify-content: flex-end;
 }
 
-.main {
+main {
   /* width: 100%;
   height: 80%; */
   display: flex;
@@ -56,6 +65,7 @@ nav {
   justify-content: center;
   align-items: center;
   /* border: slategrey solid 10px; */
+  min-height: 65vh;
 }
 
 .homepageLayout {
@@ -161,7 +171,7 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
+  /* display: flex; */
   place-items: center;
   /* min-width: 320px;
   min-height: 100vh; */

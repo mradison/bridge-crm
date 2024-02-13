@@ -17,7 +17,7 @@ const Contacts = () => {
     return <div>Loading...</div>;
   }
   return (
-    <div className="my-3">
+    <main>
       <h3 className="card-header bg-dark text-light p-2 m-0">
         {contacts.name}       
       </h3>  
@@ -26,8 +26,8 @@ const Contacts = () => {
       </div>
        <div className="m-3 p-4">
         <ContactForm contactid={contacts._id} />
-      </div> 
-    </div>
+      </div>
+    </main>
   );
 };
 

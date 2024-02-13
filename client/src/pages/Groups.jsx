@@ -17,6 +17,7 @@ const Groups = () => {
     return <div>Loading...</div>;
   }
   return (
+    <main>
     <div className="my-3">
       <div className="my-5">
        <GroupList groups={groups} />
@@ -26,6 +27,7 @@ const Groups = () => {
       </div> 
       <br />
     </div>
+    </main>
   );
 };
 

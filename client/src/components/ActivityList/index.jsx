@@ -26,39 +26,34 @@ const ActivityList = ({activities}) => {
     };
   
     return (
-      <div>
+      <>
         <br />
-      <h3 className="activitiesTitle display-inline-block text-underline">
+      <h2 className="activitiesTitle display-inline-block text-underline">
       Activities
-    </h3>
+    </h2>
       <div className="contactCards">
 
         {activities.map((activities) => (
-        <div key={activities._id} className="card mb-1">
+        <div key={activities._id} className="cards">
           <div className="card-body bg-light p-1">
           <p>{activities.type}</p>
           <p>{activities.subject}</p>
             <p>{activities.description}</p>
           </div>
           <br />
-          <div>
           <Link
           className="btn btn-primary btn-block btn-squared"
           to={`/activities/${activities._id}`}
           >View Activity  
           </Link>
-          </div>
           <br />
-          <div>
             <button className="btn btn-primary btn-block py-3"  onClick={() => handleDeleteActivity(activities._id)}>
                       Delete this Activity!
                     </button>
-            
-            </div>
         </div>
       ))}
       </div>
-      </div>
+      </>
     );
   };
 

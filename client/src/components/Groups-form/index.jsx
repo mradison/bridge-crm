@@ -47,9 +47,9 @@ const GroupsForm = () => {
 
   return (
     <>
-      <div className="GroupForm">
       <h3> Fill out Group form below </h3>
 
+      <div className="GroupForm">
       {Auth.loggedIn() ? (
         <>
           <form onSubmit={handleFormSubmit}>

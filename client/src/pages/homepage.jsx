@@ -2,6 +2,7 @@
 import { useQuery } from '@apollo/client';
 import { Link } from 'react-router-dom';
 
+
 function Homepage({ TasksValue }) {
 
     return(
@@ -12,6 +13,7 @@ function Homepage({ TasksValue }) {
                 <div className='leftColumn'>
                     {/* todo: make this look pretty*/}
                     <p>
+                        <img src="badbusiness.png"/>
                         Sign up to start the free experience!  From here you can create or modify your contacts, put them into groups, and add your activities all online in your own personal environment.
                         <br/>
                         <Link to='signup'>Click here to sign up for free!</Link>
@@ -19,6 +21,7 @@ function Homepage({ TasksValue }) {
                     </div>
                 <div className='rightColumn'>
                     <p>
+                        <img src="goodbusiness.png"/>
                         The full version of this program has all of the features that are on the free tier, except you get the following:  Bragging rights.  Offline installations.  More bragging rights.
                         <br/>
                         <Link to='cart'>Click here to buy the full experience!!!!!!!!!  (not really)</Link>

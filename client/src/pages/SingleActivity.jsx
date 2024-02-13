@@ -72,8 +72,11 @@ const SingleActivity = () => {
       <br />
       <div className="my-3">
         <form onSubmit={handleFormSubmit}>
+          <div className="card">
           <div>
-            <label htmlFor="Activities">Activity</label>
+            <h4>
+              <label htmlFor="Activities">Edit Activity</label>
+            </h4>
           </div>
           <br />
 
@@ -109,6 +112,7 @@ const SingleActivity = () => {
             <button className="btn btn-primary btn-block py-3" type="submit">
               Update Activity
             </button>
+          </div>
             <br />
             {activityUpdated}
             <br />

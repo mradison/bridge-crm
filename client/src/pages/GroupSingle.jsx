@@ -15,13 +15,9 @@ const Groupsingle = () => {
   });
 
   const group = data?.group || {};
-  //console.log(group);
-
-
-
-    const [ groupName , setGroupName] = useState('');
-    const [ groupDescription , setgroupDescription] = useState('');
-    const [ groupUpdated , setgroupUpdated] = useState('');
+  const [ groupName , setGroupName] = useState('');
+  const [ groupDescription , setgroupDescription] = useState('');
+  const [ groupUpdated , setgroupUpdated] = useState('');
 
     // TODO:ADD MUTATION NAME LINE 14
     const [ updateGroupInfo, { error }] = useMutation
@@ -75,8 +71,11 @@ const Groupsingle = () => {
       </div> 
       <br /> */}
   <form onSubmit={handleFormSubmit}>
+                  <div>
                     <div>
-                        <label htmlFor="Groups">Group</label>
+                      <h4>
+                        <label htmlFor="Groups">Edit Group</label>
+                      </h4>
                     </div>
                     <br />
 
@@ -102,17 +101,20 @@ const Groupsingle = () => {
                         </input>
                     </div>
                     
+                    
                     <div className="col-12 col-lg-3">
                       <br />
                   <button className="btn btn-primary btn-block py-3" type="submit">
                     Update Group
                   </button>
+                </div>
                   <br />
                   {groupUpdated}
                   <br />
                   </div>
                   </form>
                    <br/>
+                   
       <div>
       Associate Contact to Group: 
       </div>

@@ -14,12 +14,8 @@ const ActivityForm = () => {
   // const [activityDate, setActivityDate] = useState("");
   // const [characterCount, setCharacterCount] = useState(0);
 
-  const [addActivity, { error }] = useMutation
-  (ADD_ACTIVITY, {
-    refetchQueries: [
-      QUERY_ACTIVITIES,
-      'activities',
-    ]
+  const [addActivity, { error }] = useMutation(ADD_ACTIVITY, {
+    refetchQueries: [QUERY_ACTIVITIES, "activities"],
   });
 
   const handleFormSubmit = async (event) => {
@@ -28,10 +24,11 @@ const ActivityForm = () => {
     try {
       const { data } = await addActivity({
         variables: {
-          newActivity: {type: 
-          activityType, subject:
-          activitySubject, description:
-          activityDescription}
+          newActivity: {
+            type: activityType,
+            subject: activitySubject,
+            description: activityDescription,
+          },
         },
       });
 
@@ -44,8 +41,7 @@ const ActivityForm = () => {
     }
   };
 
-  const handleChange = (event) => 
-  {
+  const handleChange = (event) => {
     const { name, value } = event.target;
 
     if (name === "activityType") {
@@ -63,48 +59,39 @@ const ActivityForm = () => {
 
   return (
     <div>
-      <h3>Create an activity below: </h3>
+      <h3>Create an activity below</h3>
 
       {Auth.loggedIn() ? (
         <>
           <form onSubmit={handleFormSubmit}>
             <br />
-            <div>
-                        <input
-                        name="activityType"
-                        placeholder="Activity Type"
-                        value={activityType}
-                        onChange={handleChange}
-                        >
-                        </input>
-                    </div>
+            <h2 htmlFor="Activity">Activity</h2>
+            <input
+              name="activityType"
+              placeholder="Activity Type"
+              value={activityType}
+              onChange={handleChange}
+            ></input>
 
-                    <div>
-                        <input
-                        name="activitySubject"
-                        placeholder="Activity Subject"
-                        value={activitySubject}
-                        onChange={handleChange}
-                        >
-                        </input>
-                    </div>
+            <input
+              name="activitySubject"
+              placeholder="Activity Subject"
+              value={activitySubject}
+              onChange={handleChange}
+            ></input>
 
-                    <div>
-                        <input
-                        name="activityDescription"
-                        placeholder="Activity Description"
-                        value={activityDescription}
-                        onChange={handleChange}
-                        >
-                        </input>
-                    </div>
-                    <br />
-                    <div className="col-12 col-lg-3">
-                  <button className="btn btn-primary btn-block py-3" type="submit">
-                    Add Activity
-                  </button>
-            </div>
+            <input
+              name="activityDescription"
+              placeholder="Activity Description"
+              value={activityDescription}
+              onChange={handleChange}
+            ></input>
+            <br />
 
+            <button className="btn btn-primary btn-block py-3" type="submit">
+              Add Activity
+            </button>
+            <br />
           </form>
         </>
       ) : (

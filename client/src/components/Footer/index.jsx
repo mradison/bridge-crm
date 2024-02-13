@@ -13,6 +13,7 @@ const Footer = () => {
   return (
     <footer>
       <div className="flex-container">
+      <br />
         <div className="social-logos">
           <span className="logo">
             <a href="">{<img src={FacebookSVG} alt="" />}</a>

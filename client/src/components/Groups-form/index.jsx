@@ -1,107 +1,92 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useMutation } from '@apollo/client';
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { useMutation } from "@apollo/client";
 
 // TODO: ADD MUTATION NAME FORM MUTATION.JS
-import { ADD_GROUP } from '../../utils/mutations';
-import { QUERY_GROUPS } from '../../utils/queries';
+import { ADD_GROUP } from "../../utils/mutations";
+import { QUERY_GROUPS } from "../../utils/queries";
 
-import Auth from '../../utils/auth';
+import Auth from "../../utils/auth";
 
 const GroupsForm = () => {
-    const [ groupName , setGroupName] = useState('');
-    const [ groupDescription , setgroupDescription] = useState('');
+  const [groupName, setGroupName] = useState("");
+  const [groupDescription, setgroupDescription] = useState("");
 
-    // TODO:ADD MUTATION NAME LINE 14
-    const [ addGroup, { error }] = useMutation
-    (ADD_GROUP, {
-      refetchQueries: [
-        QUERY_GROUPS,
-        'groups',
-      ]
-    });
+  // TODO:ADD MUTATION NAME LINE 14
+  const [addGroup, { error }] = useMutation(ADD_GROUP, {
+    refetchQueries: [QUERY_GROUPS, "groups"],
+  });
 
-    const handleFormSubmit = async (event) => {
-        event.preventDefault();
-    
-        try {
-            // TODO:ADD MUTATION NAME AFTER AWAIT LINE 21
-          const { data } = await addGroup ({
-            variables: {
-              newGroup: {name: groupName, description: groupDescription}
-            },
-          });
-    
-          setGroupName('');
-          setgroupDescription('');
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
 
-        } catch (err) {
-          console.error(err);
-        }
-      };
-      const handleChange = (event) => {
-        const { name, value } = event.target;
-    
-        if (name === 'groupName') {
-          setGroupName(value);
-        }
-        if (name === 'groupDescription') {
-          setgroupDescription(value);
-        }
-        };
+    try {
+      // TODO:ADD MUTATION NAME AFTER AWAIT LINE 21
+      const { data } = await addGroup({
+        variables: {
+          newGroup: { name: groupName, description: groupDescription },
+        },
+      });
 
-    return (
-        <div>
-            <h3> Fill out Group form below </h3>
+      setGroupName("");
+      setgroupDescription("");
+    } catch (err) {
+      console.error(err);
+    }
+  };
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+
+    if (name === "groupName") {
+      setGroupName(value);
+    }
+    if (name === "groupDescription") {
+      setgroupDescription(value);
+    }
+  };
+
+  return (
+    <>
+      <h3> Fill out Group form below </h3>
+
+      <div className="GroupForm">
+      {Auth.loggedIn() ? (
+        <>
+          <form onSubmit={handleFormSubmit}>
+
+            <h2 htmlFor="Groups">Group</h2>
+
+            <input
+              name="groupName"
+              placeholder="Group Name"
+              // TODO: ADD VALUE
+              value={groupName}
+              onChange={handleChange}
+            ></input>
+
+            <input
+              name="groupDescription"
+              placeholder="Group Description"
+              // TODO: ADD VALUE
+              value={groupDescription}
+              onChange={handleChange}
+            ></input>
+<br />
+            <button className="btn btn-primary btn-block py-3" type="submit">
+              Add Group
+            </button>
             <br />
-
-            {Auth.loggedIn() ? (
-                <>
-                <form onSubmit={handleFormSubmit}>
-                    <div>
-                        <label htmlFor="Groups">Group</label>
-                    </div>
-                    <br />
-
-                    <div>
-                        <input
-                        name="groupName"
-                        placeholder="Group Name"
-                        // TODO: ADD VALUE
-                        value={groupName}
-                        onChange={handleChange}
-                        >
-                        </input>
-                    </div>
-
-                    <div>
-                        <input
-                        name="groupDescription"
-                        placeholder="Group Description"
-                        // TODO: ADD VALUE
-                        value={groupDescription}
-                        onChange={handleChange}
-                        >
-                        </input>
-                    </div>
-                    
-                    <div className="col-12 col-lg-3">
-                      <br />
-                  <button className="btn btn-primary btn-block py-3" type="submit">
-                    Add Group
-                  </button>
-            </div>
-                </form>
-                </>
-                ) : (
-                  <p>
-                    You need to be logged in to share your thoughts. Please{' '}
-                    <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
-                  </p>
-                )}
-        </div>
-    );
-
+          </form>
+        </>
+      ) : (
+        <p>
+          You need to be logged in to share your thoughts. Please{" "}
+          <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
+        </p>
+      )}
+      </div>
+    </>
+  );
 };
 
 export default GroupsForm;

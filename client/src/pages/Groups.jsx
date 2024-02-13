@@ -22,7 +22,7 @@ const Groups = () => {
       <div className="my-5">
        <GroupList groups={groups} />
       </div>
-      <div className="m-3 p-4">
+      <div className="GroupForm">
         <GroupForm groupid={groups._id} />
       </div> 
       <br />

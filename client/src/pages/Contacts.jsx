@@ -24,9 +24,7 @@ const Contacts = () => {
       <div className="my-5">
        <ContactList contacts={contacts} />
       </div>
-       <div className="m-3 p-4">
-        <ContactForm contactid={contacts._id} />
-      </div>
+        <ContactForm className="ContactForm" contactid={contacts._id} />
     </main>
   );
 };

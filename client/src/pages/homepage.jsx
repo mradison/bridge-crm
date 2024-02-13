@@ -26,7 +26,7 @@ function Homepage({ TasksValue }) {
                         <br/>
                         <Link 
                         class="RCLink"
-                        to='cart'>Click here to buy the full experience!!!!!!!!!  (not really)</Link>
+                        to='cart'>Click here to buy the full experience!!! (not really)</Link>
                 </div>
                 <section className="contentSection">
                 {TasksValue ? <Tasks/> : null}

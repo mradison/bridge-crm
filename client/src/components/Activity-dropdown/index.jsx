@@ -6,7 +6,7 @@ import { QUERY_CONTACTS } from '../../utils/queries';
 import { UPDATE_CONTACT_ACTIVITY } from '../../utils/mutations';
 
 const Activitydropdown = ({activity}) => {
-  let [activityid, setContactid] = useState("Select")
+  let [contactid, setContactid] = useState("Select")
   let [savesuccessfull, setsavesuccessfull] = useState()
 
   console.log(activity);

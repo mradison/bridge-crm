@@ -93,8 +93,11 @@ const SingleContact = () => {
     <main>
     <div className="my-3">
           <form onSubmit={handleFormSubmit}>
+                    <div className="card">
                     <div>
-                        <label htmlFor="Groups">Group</label>
+                      <h4>
+                        <label htmlFor="Groups">Edit Contact</label>
+                      </h4>
                     </div>
                     <br />
            <div>
@@ -239,6 +242,7 @@ const SingleContact = () => {
                   <button className="btn btn-primary btn-block py-3" type="submit">
                     Update Contact
                   </button>
+            </div>
             </div>
                 </form>
                 <br />

@@ -10,8 +10,6 @@ const ActivityList = ({activities}) => {
     const[ deleteActivity ] = useMutation( DELETE_ACTIVITY )
 
     const handleDeleteActivity = async (activityId) => {
-      console.log("something");
-      console.log(activityId);
       try {
         await deleteActivity({
           variables: {
@@ -26,26 +24,23 @@ const ActivityList = ({activities}) => {
     };
   
     return (
-      <>
-        <br />
+      <div>
       <h2 className="activitiesTitle display-inline-block text-underline">
       Activities
     </h2>
       <div className="contactCards">
-
         {activities.map((activities) => (
         <div key={activities._id} className="cards">
-          <div className="card-body bg-light p-1">
-          <p>{activities.type}</p>
-          <p>{activities.subject}</p>
+          <h4>{activities.type}</h4>
+            <p>{activities.subject}</p>
             <p>{activities.description}</p>
-          </div>
-          <br />
+          
           <Link
           className="btn btn-primary btn-block btn-squared"
-          to={`/activities/${activities._id}`}
-          >View Activity  
+          to={`/activities/${activities._id}`}>
+            View Activity  
           </Link>
+          <br />
           <br />
             <button className="btn btn-primary btn-block py-3"  onClick={() => handleDeleteActivity(activities._id)}>
                       Delete this Activity!
@@ -53,7 +48,7 @@ const ActivityList = ({activities}) => {
         </div>
       ))}
       </div>
-      </>
+      </div>
     );
   };
 

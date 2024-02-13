@@ -6,27 +6,20 @@ import GroupForm from '../components/Groups-form';
 import { QUERY_GROUPS } from '../utils/queries';
 
 const Groups = () => {
-  const { loading, data } = useQuery(QUERY_GROUPS, {
-  });
-
+  const { loading, data } = useQuery(QUERY_GROUPS, {});
   const groups = data?.groups || {};
-  //console.log(groups);
-  //console.log(data);
 
   if (loading) {
     return <div>Loading...</div>;
   }
   return (
     <main>
-    <div className="my-3">
       <div className="my-5">
        <GroupList groups={groups} />
       </div>
       <div className="GroupForm">
         <GroupForm groupid={groups._id} />
       </div> 
-      <br />
-    </div>
     </main>
   );
 };

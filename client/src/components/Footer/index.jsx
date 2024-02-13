@@ -16,25 +16,25 @@ const Footer = () => {
       <br />
         <div className="social-logos">
           <span className="logo">
-            <a href="">{<img src={FacebookSVG} alt="" />}</a>
+            <a href="https://facebook.com/" target="_blank">{<img src={FacebookSVG} alt="" />}</a>
           </span>
           <span className="logo">
-            <a href="">{<img src={InstagramSVG} alt="" />}</a>
+            <a href="https://instagram.com/" target="_blank">{<img src={InstagramSVG} alt="" />}</a>
           </span>
           <span className="logo">
-            <a href="">{<img src={LinkedInSVG} alt="" />}</a>
+            <a href="https://linkedin.com/" target="_blank">{<img src={LinkedInSVG} alt="" />}</a>
           </span>
           <span className="logo">
-            <a href="">{<img src={MSVG} alt="" />}</a>
+            <a href="https://facebook.com/" target="_blank">{<img src={MSVG} alt="" />}</a>
           </span>
           <span className="logo">
-            <a href="">{<img src={TikTokSVG} alt="" />}</a>
+            <a href="https://tiktok.com/" target="_blank">{<img src={TikTokSVG} alt="" />}</a>
           </span>
           <span className="logo">
-            <a href="">{<img src={TwitterSVG} alt="" />}</a>
+            <a href="https://twitter.com/" target="_blank">{<img src={TwitterSVG} alt="" />}</a>
           </span>
           <span className="logo">
-            <a href="">{<img src={youtubeSVG} alt="" />}</a>
+            <a href="https://youtube.com/" target="_blank">{<img src={youtubeSVG} alt="" />}</a>
           </span>
         <div className="footer-links">
           <div className="flex-item"><span>Contact Us</span></div>

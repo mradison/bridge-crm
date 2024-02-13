@@ -1,6 +1,5 @@
 // TODO: ADD STARTER CODE
 import { useQuery } from '@apollo/client';
-import Tasks from '../components/Tasks';
 import { Link } from 'react-router-dom';
 
 function Homepage({ TasksValue }) {

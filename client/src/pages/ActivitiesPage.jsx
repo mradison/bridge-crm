@@ -17,6 +17,7 @@ const Activities = () => {
   }
 
   return (
+    <main>
     <div className="my-3">
       <div className="my-5">
         <ActivityList activities={activities} />
@@ -28,6 +29,7 @@ const Activities = () => {
         <br />
       </div>
     </div>
+    </main>
   );
 };
 

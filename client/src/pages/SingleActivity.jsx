@@ -26,6 +26,7 @@ const SingleActivity = () => {
   }
 
   return (
+    <main>
     <div>
     <div className="my-3">
       <div className="my-5">
@@ -45,6 +46,7 @@ const SingleActivity = () => {
     </div>
     </div>
   </div>
+  </main>
 
   );
 };

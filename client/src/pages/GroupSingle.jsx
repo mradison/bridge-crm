@@ -62,6 +62,7 @@ const Groupsingle = () => {
     return <div>Loading...</div>;
   }
   return (
+    <main>
     <div>
       <br />
     <div className="my-3">
@@ -118,6 +119,7 @@ const Groupsingle = () => {
       <Contactdropdown group={group}/>
     </div>
     </div>
+    </main>
   );
 };
 

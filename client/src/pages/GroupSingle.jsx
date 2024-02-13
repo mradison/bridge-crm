@@ -3,8 +3,8 @@ import { useParams } from 'react-router-dom';
 import { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { UPDATE_GROUP } from '../utils/mutations';
-import { QUERY_SINGLE_GROUP, QUERY_CONTACTS } from '../utils/queries';
-import Contactdropdown from '../components/Contact-dropdown';
+import { QUERY_SINGLE_GROUP } from '../utils/queries';
+import GroupContactdropdown from '../components/GroupContact-dropdown';
 
 const Groupsingle = () => {
 
@@ -24,7 +24,7 @@ const Groupsingle = () => {
     const [ groupUpdated , setgroupUpdated] = useState('');
 
     // TODO:ADD MUTATION NAME LINE 14
-    const [ updateGroup, { error }] = useMutation
+    const [ updateGroupInfo, { error }] = useMutation
     (UPDATE_GROUP);
 
     const handleFormSubmit = async (event) => {
@@ -32,7 +32,7 @@ const Groupsingle = () => {
     
         try {
             // TODO:ADD MUTATION NAME AFTER AWAIT LINE 21
-          const { data } = await updateGroup ({
+          const { data } = await updateGroupInfo ({
             variables: {
               newGroupInfo: {name: groupName, description: groupDescription}, groupId: groupid
             },
@@ -116,7 +116,7 @@ const Groupsingle = () => {
       <div>
       Associate Contact to Group: 
       </div>
-      <Contactdropdown group={group}/>
+      <GroupContactdropdown group={group}/>
     </div>
     </div>
     </main>

@@ -19,6 +19,7 @@ const Grouplist = ({groups}) => {
         },
        
       });     
+      window.location.reload(); 
      
     } catch (err) {
       console.error(err);

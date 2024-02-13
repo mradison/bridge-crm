@@ -124,7 +124,6 @@ const SingleActivity = () => {
     <div style={{ margin: '15px' }}>
     <Contactdropdown activity={activity}/>
     </div>
-    </div>
   </main>
   );
 };

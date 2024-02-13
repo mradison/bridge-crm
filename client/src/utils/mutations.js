@@ -196,8 +196,8 @@ export const UPDATE_CONTACT = gql`
 `;
 
 export const UPDATE_ACTIVITY = gql`
-  mutation updateActivityInfo($newActivityInfo: inputactivityInfo!, $groupId: ID!) {
-    updateActivityInfo(newActivityInfo: $newActivityInfo, groupid: $groupId) {
+  mutation updateActivityInfo($newActivityInfo: inputactivityInfo!, $activityId: ID!) {
+    updateActivityInfo(newActivityInfo: $newActivityInfo, activityid: $activityId) {
       _id
       type
       subject

@@ -1,9 +1,29 @@
 import { Link } from "react-router-dom";
+import { useMutation } from '@apollo/client';
+import { DELETE_ACTIVITY } from '../../utils/mutations';
 
-const ActivityList = ({ activities}) => {
+const ActivityList = ({activities}) => {
     if (!activities.length) {
       return <h3>No Activities Yet</h3>;
     }
+
+    const[ deleteActivity ] = useMutation( DELETE_ACTIVITY )
+
+    const handleDeleteActivity = async (activityId) => {
+      console.log("something");
+      console.log(activityId);
+      try {
+        await deleteActivity({
+          variables: {
+            activityId
+          },
+         
+        });     
+       window.location.reload();
+      } catch (err) {
+        console.error(err);
+      }
+    };
   
     return (
       <div>
@@ -12,13 +32,13 @@ const ActivityList = ({ activities}) => {
       Activities
     </h3>
       <div className="contactCards">
+
         {activities.map((activities) => (
         <div key={activities._id} className="card mb-1">
           <div className="card-body bg-light p-1">
+          <p>{activities.type}</p>
+          <p>{activities.subject}</p>
             <p>{activities.description}</p>
-            <p>{activities.activitydate}</p>
-            <p>{activities.subject}</p>
-            <p>{activities.type}</p>
           </div>
           <br />
           <div>
@@ -30,10 +50,10 @@ const ActivityList = ({ activities}) => {
           </div>
           <br />
           <div>
-          <select name="Edit" id="Edit"> 
-              <option>Update</option>
-              <option>Delete</option>
-            </select>
+            <button className="btn btn-primary btn-block py-3"  onClick={() => handleDeleteActivity(activities._id)}>
+                      Delete this Activity!
+                    </button>
+            
             </div>
         </div>
       ))}

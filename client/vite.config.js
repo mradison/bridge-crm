@@ -8,7 +8,7 @@ export default defineConfig({
     react(),
     VitePWA({  
       registerType: 'prompt',  
-      includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],  
+      includeAssets: ['**/*','assets/**/*'],  
       manifest: {  
   name: 'BridgeCRM',  
         short_name: 'BridgeCRM',  

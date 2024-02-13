@@ -16,6 +16,7 @@ import Error from './pages/Error';
 import SingleActivity from './pages/SingleActivity.jsx';
 import ActivitiesPage from './pages/ActivitiesPage.jsx';
 
+
 if (auth.loggedIn()) {
   const router = createBrowserRouter([
     {

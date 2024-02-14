@@ -30,7 +30,7 @@ const ActivityList = ({ activities }) => {
       <h2 className="activitiesTitle display-inline-block text-underline">
         Activities
       </h2>
-      <>
+      <div>
         <div className="contactCards">
           {activities.map((activities) => (
             <div key={activities._id} className="cards">
@@ -55,51 +55,51 @@ const ActivityList = ({ activities }) => {
             </div>
           ))}
         </div>
-      </>
+      </div>
     </div>
   );
 };
 
-    const handleDeleteActivity = async (activityId) => {
-      try {
-        await deleteActivity({
-          variables: {
-            activityId
-          },
+//     const handleDeleteActivity = async (activityId) => {
+//       try {
+//         await deleteActivity({
+//           variables: {
+//             activityId
+//           },
          
-        });     
-       window.location.reload();
-      } catch (err) {
-        console.error(err);
-      }
-    };
+//         });     
+//        window.location.reload();
+//       } catch (err) {
+//         console.error(err);
+//       }
+//     };
   
-    return (
-      <div>
-      <h2 className="activitiesTitle display-inline-block text-underline">
-      Activities
-    </h2>
-      <div className="contactCards">
-        {activities.map((activities) => (
-        <div key={activities._id} className="cards">
-          <h4>{activities.type}</h4>
-            <p>{activities.subject}</p>
-            <p>{activities.description}</p>
+//     return (
+//       <div>
+//       <h2 className="activitiesTitle display-inline-block text-underline">
+//       Activities
+//     </h2>
+//       <div className="contactCards">
+//         {activities.map((activities) => (
+//         <div key={activities._id} className="cards">
+//           <h4>{activities.type}</h4>
+//             <p>{activities.subject}</p>
+//             <p>{activities.description}</p>
           
-          <Link
-          className="btn btn-primary btn-block btn-squared"
-          to={`/activities/${activities._id}`}>
-            View Activity  
-          </Link>
-          <br />
-            <button className="btn btn-primary btn-block py-3"  onClick={() => handleDeleteActivity(activities._id)}>
-                      Delete this Activity!
-                    </button>
-        </div>
-      ))}
-      </div>
-      </div>
-    );
-  };
+//           <Link
+//           className="btn btn-primary btn-block btn-squared"
+//           to={`/activities/${activities._id}`}>
+//             View Activity  
+//           </Link>
+//           <br />
+//             <button className="btn btn-primary btn-block py-3"  onClick={() => handleDeleteActivity(activities._id)}>
+//                       Delete this Activity!
+//                     </button>
+//         </div>
+//       ))}
+//       </div>
+//       </div>
+//     );
+//   };
 
 export default ActivityList;

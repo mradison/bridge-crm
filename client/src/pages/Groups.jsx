@@ -22,7 +22,6 @@ const Groups = () => {
         <GroupForm groupid={groups._id} />
       </div> 
     </div>
-    </div>
 
     </main>
   );

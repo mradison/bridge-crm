@@ -119,9 +119,10 @@ const SingleActivity = () => {
           <div>
             <h2>Associate Contact to Activity:</h2>
             <Activitydropdown activity={activity} />
+            </div>
+            </div>
+       
 
-    <div>
-      <br />
       <div className="my-3">
         <form onSubmit={handleFormSubmit}>
           <div className="card">
@@ -130,6 +131,8 @@ const SingleActivity = () => {
               <label htmlFor="Activities">Edit Activity</label>
             </h4>
           </div>
+          </div>
+        
           <br />
 
           <div>
@@ -158,7 +161,7 @@ const SingleActivity = () => {
               onChange={handleChange}
             ></input>
           </div>
-
+          </form>
           <div className="col-12 col-lg-3">
             <br />
             <button className="btn btn-primary btn-block py-3" type="submit">
@@ -171,7 +174,6 @@ const SingleActivity = () => {
 
           </div>
         </div>
-      </div>
     </main>
   );
 };

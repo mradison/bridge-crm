@@ -87,7 +87,7 @@ const resolvers = {
     updatecontactGroup: async (parent, { newGroupInfo, contactId }, context) => {
         if (context.user) {
           const groupData = {
-            groupId: newGroupInfo.groupId,
+            groupId: newGroupInfo._id,
             name: newGroupInfo.name,
             description: newGroupInfo.description
           };

@@ -88,8 +88,10 @@ const typeDefs = `
 
   input inputgroupInfo {
     name: String!
+    groupId: String
     description: String
   }
+
   input inputactivityInfo {
     type: String!
     subject: String

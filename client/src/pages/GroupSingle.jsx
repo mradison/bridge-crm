@@ -29,6 +29,7 @@ const Groupsingle = () => {
     event.preventDefault();
   
     try {
+      console.log(`adding this contact to group id: ${groupid}`);
       // Define the group information object
       const groupInfo = {
         groupId: groupid,

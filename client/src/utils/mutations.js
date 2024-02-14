@@ -90,6 +90,7 @@ export const UPDATE_CONTACT_GROUP = gql`
       website
       groupInfo {
         _id
+        groupId
         name
         description
       }

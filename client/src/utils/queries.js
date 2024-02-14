@@ -34,6 +34,12 @@ export const QUERY_CONTACTS = gql`
     country
     zip
     website
+    groupInfo {
+      _id
+      groupId
+      name
+      description
+    }
   }
 }`;
 

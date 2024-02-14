@@ -119,6 +119,56 @@ const SingleActivity = () => {
           <div>
             <h2>Associate Contact to Activity:</h2>
             <Activitydropdown activity={activity} />
+
+    <div>
+      <br />
+      <div className="my-3">
+        <form onSubmit={handleFormSubmit}>
+          <div className="card">
+          <div>
+            <h4>
+              <label htmlFor="Activities">Edit Activity</label>
+            </h4>
+          </div>
+          <br />
+
+          <div>
+            <input
+              name="activityType"
+              placeholder={activity.type}
+              value={activityType}
+              onChange={handleChange}
+            ></input>
+          </div>
+
+          <div>
+            <input
+              name="activitySubject"
+              placeholder={activity.subject}
+              value={activitySubject}
+              onChange={handleChange}
+            ></input>
+          </div>
+
+          <div>
+            <input
+              name="activityDescription"
+              placeholder={activity.description}
+              value={activityDescription}
+              onChange={handleChange}
+            ></input>
+          </div>
+
+          <div className="col-12 col-lg-3">
+            <br />
+            <button className="btn btn-primary btn-block py-3" type="submit">
+              Update Activity
+            </button>
+          </div>
+            <br />
+            {activityUpdated}
+            <br />
+
           </div>
         </div>
       </div>

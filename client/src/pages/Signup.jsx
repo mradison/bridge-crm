@@ -43,7 +43,7 @@ const Signup = () => {
     <main className="main">
       <div className="col-12 col-lg-10">
         <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Sign Up</h4>
+          <h2 className="card-header bg-dark text-light p-2">Sign Up</h2>
           <div className="card-body">
             {data ? (
               <p>
@@ -53,6 +53,7 @@ const Signup = () => {
             ) : (
               <form className="signUpForm"
               onSubmit={handleFormSubmit}>
+                <br/>
                 <input
                   className="form-input"
                   placeholder="Your username"

@@ -3,7 +3,6 @@ import { useMutation } from "@apollo/client";
 import { DELETE_GROUP } from "../../utils/mutations";
 
 const Grouplist = ({ groups }) => {
-  //console.log(props);
   if (!groups.length) {
     return <h3>No Groups Exist</h3>;
   }
@@ -28,6 +27,7 @@ const Grouplist = ({ groups }) => {
       <h2 className="activitiesTitle display-inline-block text-underline">
         Groups
       </h2>
+
       <>
         <div className="contactCards">
           {groups.map((groups) => (
@@ -53,6 +53,28 @@ const Grouplist = ({ groups }) => {
           ))}
         </div>
       </>
+
+      <div className="contactCards">
+        {groups.map((groups) => (
+          <div key={groups._id} className="cards">
+            <h4>{groups.name}</h4>
+            <p>{groups.description}</p>
+            <Link
+              className="btn btn-primary btn-block btn-squared"
+              to={`/groups/${groups._id}`}>
+              View Group
+            </Link>
+            <br />
+            <br />
+            <button
+              className="btn btn-primary btn-block py-3"
+              onClick={() => handleDeleteGroup(groups._id)}>
+              Delete this Group!
+            </button>
+          </div>
+        ))}
+      </div>
+
     </div>
   );
 };

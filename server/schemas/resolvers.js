@@ -87,10 +87,12 @@ const resolvers = {
     updatecontactGroup: async (parent, { newGroupInfo, contactId }, context) => {
         if (context.user) {
           const groupData = {
-            groupId: newGroupInfo._id,
+            groupId: newGroupInfo.groupId,
             name: newGroupInfo.name,
             description: newGroupInfo.description
           };
+          console.log("***********************************");
+          console.log(groupData);
           const updatedContact = await Contact.findByIdAndUpdate(
             { _id: contactId },
             { $push: { groupInfo: groupData }},
@@ -146,7 +148,6 @@ const resolvers = {
           _id: contactid
         },
         { new: true });
-     
         return contact;
       }
       throw AuthenticationError;

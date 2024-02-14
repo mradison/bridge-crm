@@ -8,16 +8,14 @@ import { UPDATE_CONTACT_GROUP } from '../../utils/mutations';
 const GroupContactdropdown = ({group}) => {
   let [contactid, setContactid] = useState("Select")
   let [savesuccessfull, setsavesuccessfull] = useState()
-
-  console.log(group);
  
   const [ updatecontactGroup, { error }] = useMutation
   (UPDATE_CONTACT_GROUP);
 
 
   let handleContactChange = (e) => {
-
-    //console.log(e.target.value);
+    
+    
     setContactid(e.target.value)
     setsavesuccessfull('')
   }
@@ -25,12 +23,16 @@ const GroupContactdropdown = ({group}) => {
   const handleFormSubmit = async (event) => {
   event.preventDefault();
     try {
+      console.log("-------------------------");
+      console.log(`name: ${group.name}, description: ${group.description}, groupId: ${group._id}`)
+      console.log("-------------------------");
       const { data } = await updatecontactGroup ({
         variables: {
           newGroupInfo: {name: group.name, description: group.description, groupId: group._id}, 
           contactId: contactid
         },
       });
+
     
     setContactid('');
     setsavesuccessfull('Contact Associated')
@@ -57,10 +59,9 @@ const GroupContactdropdown = ({group}) => {
     <div>    
       <select onChange={handleContactChange}> 
       <option value="Select"> -- Select a Contact -- </option>
-         
       {contacts.map((contact) => <option key={contact._id} value={contact._id}>{contact.name}</option>)}
     </select>
-
+      <input type="hidden" id="groupId" name="groupId" value={group._id} />
     <div>
       <br />
     </div>

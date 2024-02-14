@@ -88,7 +88,7 @@ const typeDefs = `
 
   input inputgroupInfo {
     name: String!
-    groupId: String
+    groupId: ID!
     description: String
   }
 

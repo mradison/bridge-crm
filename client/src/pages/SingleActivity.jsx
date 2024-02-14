@@ -7,42 +7,43 @@ import { QUERY_SINGLE_ACTIVITY, QUERY_CONTACTS } from "../utils/queries";
 import Activitydropdown from "../components/Activity-dropdown";
 
 const SingleActivity = () => {
-
   const { activityid } = useParams();
 
   const { loading, data } = useQuery(QUERY_SINGLE_ACTIVITY, {
     variables: { activityid: activityid },
   });
 
-  // console.log(data);
+ 
 
   const activity = data?.activity || {};
 
-  const [activityType, setActivityType] = useState("");
-  const [activitySubject, setActivitySubject] = useState("");
-  const [activityDescription, setactivityDescription] = useState("");
+  
+  console.log(activity);
   const [activityUpdated, setactivityUpdated] = useState("");
-
-  const [ updateActivity, { error }] = useMutation(UPDATE_ACTIVITY);
-
+  
+  const [updateActivity, { error }] = useMutation(UPDATE_ACTIVITY);
+  
+  const [formData, setFormData] =  useState({
+    type: activity.type, 
+    subject: activity.subject,
+    description: activity.description
+  })
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
     try {
       const { data } = await updateActivity({
         variables: {
-          newActivityInfo: {type: activityType,
-            subject: activitySubject,
-            description: activityDescription},
-            activityId: activityid,
+          newActivityInfo: formData,
+          activityId: activityid,
         },
       });
 
       setactivityUpdated("Activity Updated");
-      setActivityType("");
-      setActivitySubject("");
-      setactivityDescription("");
-
+      // setActivityType("");
+      // setActivitySubject("");
+      // setactivityDescription("");
+      window.location.replace("/activities");
     } catch (err) {
       console.error(err);
     }
@@ -50,16 +51,17 @@ const SingleActivity = () => {
   const handleChange = (event) => {
     setactivityUpdated("");
     const { name, value } = event.target;
+    setFormData({...formData, [name]: value})
 
-    if (name === "activityType") {
-      setActivityType(value);
-    }
-    if (name === "activitySubject") {
-      setActivitySubject(value);
-    }
-    if (name === "activityDescription") {
-      setactivityDescription(value);
-    }
+    // if (name === "type") {
+    //   setActivityType(value);
+    // }
+    // if (name === "subject") {
+    //   setActivitySubject(value);
+    // }
+    // if (name === "activityDescription") {
+    //   setactivityDescription(value);
+    // }
   };
 
   if (loading) {
@@ -68,6 +70,56 @@ const SingleActivity = () => {
 
   return (
     <main>
+      <div>
+        <h2>Activity</h2>
+
+        <div className="my-3">
+          <form
+            onSubmit={handleFormSubmit}
+            style={{ padding: "15px", marginBottom: "30px" }}
+          >
+            <div>
+              <label htmlFor="activityType">Type</label>
+              <input
+                name="type"
+             type="text"
+                value={formData.type}
+                onChange={handleChange}
+                defaultValue={activity.type}
+              />
+            </div>
+
+            <div>
+              <label htmlFor="activitySubject">Subject</label>
+              <input
+                name="subject"
+                defaultValue={activity.subject}
+                type="text"
+                value={formData.subject}
+                onChange={handleChange}
+              />
+            </div>
+
+            <div>
+              <label htmlFor="description">Description</label>
+              <textarea
+                name="description"
+            
+                value={formData.description}
+                onChange={handleChange}
+              >{activity.description}</textarea>
+            </div>
+
+            <div className="col-12 col-lg-3">
+              <button className="btn btn-primary btn-block py-3" type="submit">
+                Update Activity
+              </button>
+            </div>
+          </form>
+          <div>
+            <h2>Associate Contact to Activity:</h2>
+            <Activitydropdown activity={activity} />
+
     <div>
       <br />
       <div className="my-3">
@@ -116,14 +168,11 @@ const SingleActivity = () => {
             <br />
             {activityUpdated}
             <br />
+
           </div>
-        </form>
-        <br />
-        <div>Associate Contact to Activity:</div>
-        <Activitydropdown activity={activity} />
+        </div>
       </div>
-    </div>
-  </main>
+    </main>
   );
 };
 

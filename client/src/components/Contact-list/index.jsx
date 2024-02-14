@@ -30,6 +30,15 @@ const Contactlist = ({ contacts }) => {
       <div className="contactCards">
         {contacts.map((contacts) => (
           <div key={contacts._id} className="cards">
+
+            <div className="card-body bg-light p-1">
+              <p>{contacts.nickname}</p>
+              <p>{contacts.businessphone}</p>
+              <p>{contacts.email}</p>
+              <p>{contacts.group}</p>
+              <p>{contacts.activity}</p>
+            </div>
+
             <h4>{contacts.name}</h4>
             <p>{contacts.nickname}</p>
             <p>{contacts.businessphone}</p>

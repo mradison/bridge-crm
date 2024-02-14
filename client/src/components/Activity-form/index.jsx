@@ -59,10 +59,10 @@ const ActivityForm = () => {
 
   return (
     <div>
-      <h3>Create an activity below</h3>
-
+      <h3 className="activitiesTitle display-inline-block text-underline">Create an activity below</h3>
+      <div className="cardContainer">
       {Auth.loggedIn() ? (
-        <>
+        <div className="contactCard" style={{textAlign: "center"}}>
           <form onSubmit={handleFormSubmit}>
             <br />
             <h2 htmlFor="Activity">Activity</h2>
@@ -86,14 +86,11 @@ const ActivityForm = () => {
               value={activityDescription}
               onChange={handleChange}
             ></input>
-            <br />
-
             <button className="btn btn-primary btn-block py-3" type="submit">
-              Add Activity
+              <h4 style={{margin: '5px'}}>Add Activity</h4>
             </button>
-            <br />
           </form>
-        </>
+        </div>
       ) : (
         <p>
           You need to be logged in to add the activity details. Please{" "}
@@ -101,6 +98,8 @@ const ActivityForm = () => {
         </p>
       )}
     </div>
+    </div>
+
   );
 };
 

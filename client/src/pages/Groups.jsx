@@ -17,9 +17,13 @@ const Groups = () => {
       <div className="my-5">
        <GroupList groups={groups} />
       </div>
-      <div className="GroupForm">
+      <div className="my-3">
+      <div className="m-3 p-4">
         <GroupForm groupid={groups._id} />
       </div> 
+    </div>
+    </div>
+
     </main>
   );
 };

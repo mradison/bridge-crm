@@ -44,7 +44,6 @@ const Contactdropdown = ({group}) => {
   });
 
   const contacts = data?.contacts || {};
-  //console.log(contacts);
 
   if (loading) {
     return <div>Loading...</div>;

@@ -32,7 +32,6 @@ const ContactForm = () => {
     event.preventDefault();
 
     try {
-      // TODO:ADD MUTATION NAME AFTER AWAIT LINE 21
       const { data } = await addContact({
         variables: {
           newContact: {

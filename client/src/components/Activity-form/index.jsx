@@ -11,8 +11,6 @@ const ActivityForm = () => {
   const [activityType, setActivityType] = useState("");
   const [activitySubject, setActivitySubject] = useState("");
   const [activityDescription, setActivityDescription] = useState("");
-  // const [activityDate, setActivityDate] = useState("");
-  // const [characterCount, setCharacterCount] = useState(0);
 
   const [addActivity, { error }] = useMutation(ADD_ACTIVITY, {
     refetchQueries: [QUERY_ACTIVITIES, "activities"],
@@ -35,7 +33,6 @@ const ActivityForm = () => {
       setActivityType("");
       setActivitySubject("");
       setActivityDescription("");
-      // setActivityDate("");
     } catch (err) {
       console.error(err);
     }

@@ -44,7 +44,7 @@ const Login = (props) => {
     <main className="main">
       <div className="col-12 col-lg-10">
         <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Login</h4>
+          <h2 className="card-header bg-dark text-light p-2">Login</h2>
           <div className="card-body">
             {data ? (
               <p>
@@ -54,6 +54,7 @@ const Login = (props) => {
             ) : (
               <form className="logInForm"
               onSubmit={handleFormSubmit}>
+                <br/>
                 <input
                   className="form-input"
                   placeholder="Your email"

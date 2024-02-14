@@ -26,7 +26,7 @@ body {
 }
 
 .cards {
-  padding: 10px;
+  padding: 1px;
 }
 
 .App {
@@ -45,11 +45,13 @@ nav {
 
 main {
   display: flex;
+  flex-wrap: wrap;
   color: white;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 65vh;
+  /* width: 100%; */
 }
 
 .frontPics {

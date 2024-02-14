@@ -41,7 +41,6 @@ const ActivityList = ({activities}) => {
             View Activity  
           </Link>
           <br />
-          <br />
             <button className="btn btn-primary btn-block py-3"  onClick={() => handleDeleteActivity(activities._id)}>
                       Delete this Activity!
                     </button>

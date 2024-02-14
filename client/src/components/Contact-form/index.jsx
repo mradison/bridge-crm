@@ -78,7 +78,7 @@ const ContactForm = () => {
   return (
     <div>
       <h3 className="activitiesTitle display-inline-block text-underline">
-        Fill out the form below
+        Fill out Contact form below
       </h3>
       <div className="cardContainer">
         {Auth.loggedIn() ? (

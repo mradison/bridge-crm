@@ -29,6 +29,7 @@ const Login = (props) => {
       });
 
       Auth.login(data.login.token);
+      window.location.replace("/contacts");
     } catch (e) {
       console.error(e);
     }
@@ -47,10 +48,7 @@ const Login = (props) => {
           <h2 className="card-header bg-dark text-light p-2">Login</h2>
           <div className="card-body">
             {data ? (
-              <p>
-                Success! You may now head{' '}
-                <Link to="/">back to the homepage.</Link>
-              </p>
+                <Link ></Link>
             ) : (
               <form className="logInForm"
               onSubmit={handleFormSubmit}>

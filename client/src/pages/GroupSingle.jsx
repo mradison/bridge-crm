@@ -57,19 +57,10 @@ const Groupsingle = () => {
   }
   return (
     <main>
-      <div >
+      <div style={{ margin: "30px" }}>
         <h2>Associate Contact to Group: </h2>
         <GroupContactdropdown group={group} />
       </div>
-      <br />
-      {/* <div className="my-5" style={{ borderBottom: "2px solid" }}>
-      {group.name} <br />
-      </div>
-      <br />
-      <div className="m-3 p-4">
-      {group.description} <br />
-      </div> 
-    <br /> */}
       <form onSubmit={handleFormSubmit}>
         <div className="h2">
           <br />

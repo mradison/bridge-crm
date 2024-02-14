@@ -27,8 +27,6 @@ const Grouplist = ({ groups }) => {
       <h2 className="activitiesTitle display-inline-block text-underline">
         Groups
       </h2>
-
-      <>
         <div className="contactCards">
           {groups.map((groups) => (
             <div key={groups._id} className="cards">
@@ -36,45 +34,24 @@ const Grouplist = ({ groups }) => {
                 {groups.name} <br />
               </h4>
               <p>{groups.description}</p>
-              <Link
-                className="btn btn-primary btn-block btn-squared"
-                to={`/groups/${groups._id}`}
-              >
-                View Group
+              <Link to={`/groups/${groups._id}`}>
+                <h4
+                  className="btn btn-primary btn-block btn-squared"
+                  style={{ margin: "0px", color: "lightblue" }}
+                >
+                  View Group
+                </h4>
               </Link>
               <br />
               <button
                 className="btn btn-primary btn-block py-3"
                 onClick={() => handleDeleteGroup(groups._id)}
               >
-                Delete this Group!
+                <h4 style={{ margin: "2px" }}>Delete this Group!</h4>
               </button>
             </div>
           ))}
         </div>
-      </>
-
-      <div className="contactCards">
-        {groups.map((groups) => (
-          <div key={groups._id} className="cards">
-            <h4>{groups.name}</h4>
-            <p>{groups.description}</p>
-            <Link
-              className="btn btn-primary btn-block btn-squared"
-              to={`/groups/${groups._id}`}>
-              View Group
-            </Link>
-            <br />
-            <br />
-            <button
-              className="btn btn-primary btn-block py-3"
-              onClick={() => handleDeleteGroup(groups._id)}>
-              Delete this Group!
-            </button>
-          </div>
-        ))}
-      </div>
-
     </div>
   );
 };

@@ -11,15 +11,10 @@ const Activities = () => {
 
   const activities = data?.activities || {};
   console.log(activities);
-  // console.log(data);
 
-  // const { loading, data } = useQuery(QUERY_ACTIVITIES, {});
-  // const activities = data?.activities || {};
-
-
-  // if (loading) {
-  //   return <div>Loading...</div>;
-  // }
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <main>

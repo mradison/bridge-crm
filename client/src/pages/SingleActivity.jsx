@@ -13,21 +13,18 @@ const SingleActivity = () => {
     variables: { activityid: activityid },
   });
 
- 
-
   const activity = data?.activity || {};
 
-  
   console.log(activity);
   const [activityUpdated, setactivityUpdated] = useState("");
-  
+
   const [updateActivity, { error }] = useMutation(UPDATE_ACTIVITY);
-  
-  const [formData, setFormData] =  useState({
-    type: activity.type, 
+
+  const [formData, setFormData] = useState({
+    type: activity.type,
     subject: activity.subject,
-    description: activity.description
-  })
+    description: activity.description,
+  });
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
@@ -40,9 +37,6 @@ const SingleActivity = () => {
       });
 
       setactivityUpdated("Activity Updated");
-      // setActivityType("");
-      // setActivitySubject("");
-      // setactivityDescription("");
       window.location.replace("/activities");
     } catch (err) {
       console.error(err);
@@ -51,17 +45,7 @@ const SingleActivity = () => {
   const handleChange = (event) => {
     setactivityUpdated("");
     const { name, value } = event.target;
-    setFormData({...formData, [name]: value})
-
-    // if (name === "type") {
-    //   setActivityType(value);
-    // }
-    // if (name === "subject") {
-    //   setActivitySubject(value);
-    // }
-    // if (name === "activityDescription") {
-    //   setactivityDescription(value);
-    // }
+    setFormData({ ...formData, [name]: value });
   };
 
   if (loading) {
@@ -70,55 +54,56 @@ const SingleActivity = () => {
 
   return (
     <main>
-      <div>
-        <h2>Activity</h2>
-
+      <div style={{ margin: "10px" }}>
+        <h2>Associate Contact to Activity:</h2>
+        <Activitydropdown activity={activity} />
+      </div>
+      <div  style={{ padding: "15px", marginBottom: "30px" }}>
         <div className="my-3">
           <form
             onSubmit={handleFormSubmit}
-            style={{ padding: "15px", marginBottom: "30px" }}
+            style={{ padding: "15px", marginTop: "15px" }}
           >
+                      <h2 className="h2" htmlFor="Groups">
+            Edit Activity
+          </h2>
             <table>
               <tr>
-                <td>            
-              Type:
-              </td>
-              <td>
-              <input
-                name="type"
-             type="text"
-                value={formData.type}
-                onChange={handleChange}
-                defaultValue={activity.type}
-              />
-              </td>
+                <td>Type:</td>
+                <td>
+                  <input
+                    name="type"
+                    type="text"
+                    defaultValue={activity.type}
+                    value={formData.type}
+                    onChange={handleChange}
+                  />
+                </td>
               </tr>
               <tr>
+                <td>Subject:</td>
                 <td>
-              Subject: 
-              </td>
-              <td>
-              <input
-                name="subject"
-                defaultValue={activity.subject}
-                type="text"
-                value={formData.subject}
-                onChange={handleChange}
-              />
-              </td>
+                  <input
+                    name="subject"
+                    type="text"
+                    defaultValue={activity.subject}
+                    value={formData.subject}
+                    onChange={handleChange}
+                  />
+                </td>
               </tr>
               <tr>
+                <td>Description:</td>
                 <td>
-              Description: 
-              </td>
-              <td>
-              <textarea
-                name="description"
-                className="activityDescription"
-                value={activity.description}
-                onChange={handleChange}
-              />
-              </td>
+                  <textarea
+                    name="description"
+                    type="text"
+                    defaultValue={activity.description}
+                    value={formData.description}
+                    className="activityDescription"
+                    onChange={handleChange}
+                  />
+                </td>
               </tr>
             </table>
             <div className="col-12 col-lg-3">
@@ -127,16 +112,8 @@ const SingleActivity = () => {
               </button>
             </div>
           </form>
-          <div>
-            <h2>Associate Contact to Activity:</h2>
-            <Activitydropdown activity={activity} />
-            </div>
-          
-       
-
-      
-          </div>
         </div>
+      </div>
     </main>
   );
 };

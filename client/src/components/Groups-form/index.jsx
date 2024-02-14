@@ -47,43 +47,46 @@ const GroupsForm = () => {
 
   return (
     <div>
-      <h3 className="activitiesTitle display-inline-block text-underline"> Fill out Group form below </h3>
+      <h3 className="activitiesTitle display-inline-block text-underline">
+        {" "}
+        Fill out Group form below{" "}
+      </h3>
 
       <div className="cardContainer">
-      {Auth.loggedIn() ? (
-        <>
-          <form onSubmit={handleFormSubmit}>
+        {Auth.loggedIn() ? (
+          <>
+            <form onSubmit={handleFormSubmit}>
+              <div className="h2">
+                <h2 className="h2" htmlFor="Groups">
+                  Group
+                </h2>
 
-            <h2 htmlFor="Groups">Group</h2>
+                <input
+                  name="groupName"
+                  placeholder="Group Name"
+                  value={groupName}
+                  onChange={handleChange}
+                ></input>
 
-            <input
-              name="groupName"
-              placeholder="Group Name"
-              // TODO: ADD VALUE
-              value={groupName}
-              onChange={handleChange}
-            ></input>
-
-            <input
-              name="groupDescription"
-              placeholder="Group Description"
-              // TODO: ADD VALUE
-              value={groupDescription}
-              onChange={handleChange}
-            ></input>
-<br />
-            <button className="btn btn-primary btn-block py-3" type="submit">
-              Add Group
-            </button>
-            <br />
-          </form>
-        </>
-      ) : (
-        <p>
-          You need to be logged in to share your thoughts. Please{" "}
-          <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
-        </p>
-      )}
+                <input
+                  name="groupDescription"
+                  placeholder="Group Description"
+                  value={groupDescription}
+                  onChange={handleChange}
+                ></input>
+              </div>
+              <button className="btn btn-primary btn-block py-3" type="submit">
+                Add Group
+              </button>
+              <br />
+            </form>
+          </>
+        ) : (
+          <p>
+            You need to be logged in to share your thoughts. Please{" "}
+            <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
+          </p>
+        )}
       </div>
     </div>
   );

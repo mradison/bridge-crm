@@ -73,7 +73,7 @@ const resolvers = {
           zip: newContact.zip,
           website: newContact.website,
         });
-
+        
         await User.findOneAndUpdate(
           { _id: context.user._id },
           { $addToSet: { contact: contact._id } }
@@ -86,9 +86,14 @@ const resolvers = {
       ,    
     updatecontactGroup: async (parent, { newGroupInfo, contactId }, context) => {
         if (context.user) {
+          const groupData = {
+            groupId: newGroupInfo._id,
+            name: newGroupInfo.name,
+            description: newGroupInfo.description
+          };
           const updatedContact = await Contact.findByIdAndUpdate(
             { _id: contactId },
-            { $push: { groupInfo: newGroupInfo }},
+            { $push: { groupInfo: groupData }},
             { new: true }
           );
           return updatedContact;

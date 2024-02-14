@@ -17,7 +17,7 @@ const GroupContactdropdown = ({group}) => {
 
   let handleContactChange = (e) => {
 
-    console.log(e.target.value);
+    //console.log(e.target.value);
     setContactid(e.target.value)
     setsavesuccessfull('')
   }
@@ -27,7 +27,7 @@ const GroupContactdropdown = ({group}) => {
     try {
       const { data } = await updatecontactGroup ({
         variables: {
-          newGroupInfo: {name: group.name, description: group.description}, 
+          newGroupInfo: {name: group.name, description: group.description, groupId: group._id}, 
           contactId: contactid
         },
       });
@@ -44,7 +44,7 @@ const GroupContactdropdown = ({group}) => {
   });
 
   const contacts = data?.contacts || {};
-  console.log(contacts);
+  //console.log(contacts);
 
   if (loading) {
     return <div>Loading...</div>;

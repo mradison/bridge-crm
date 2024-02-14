@@ -24,8 +24,15 @@ const typeDefs = `
     country: String
     zip: String
     website: String
-    groupInfo: [Group]
+    groupInfo: [GroupInfo]
     activityInfo: [Activity]
+  }
+
+  type GroupInfo {
+    _id: ID
+    groupId: ID
+    name: String
+    description: String
   }
 
   type Groups {
@@ -81,8 +88,10 @@ const typeDefs = `
 
   input inputgroupInfo {
     name: String!
+    groupId: String
     description: String
   }
+
   input inputactivityInfo {
     type: String!
     subject: String

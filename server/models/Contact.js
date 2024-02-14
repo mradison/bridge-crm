@@ -65,7 +65,14 @@ const contactSchema = new Schema({
     type: String,   
     trim: true,
   },
-  groupInfo: [Group.schema],
+  groupInfo: [{
+    groupId: {
+      type: Schema.Types.ObjectId, // Reference to the group _id
+      ref: 'Group'
+    },
+    name: String, // Group name
+    description: String // Group description
+  }],
   activityInfo: [Activity.schema],
 });
 

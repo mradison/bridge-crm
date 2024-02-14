@@ -59,47 +59,52 @@ const ActivityForm = () => {
 
   return (
     <div>
-      <h3 className="activitiesTitle display-inline-block text-underline">Create an activity below</h3>
+      <h3 className="activitiesTitle display-inline-block text-underline">
+        Create an activity below
+      </h3>
       <div className="cardContainer">
-      {Auth.loggedIn() ? (
-        <div className="contactCard" style={{textAlign: "center"}}>
-          <form onSubmit={handleFormSubmit}>
-            <br />
-            <h2 htmlFor="Activity">Activity</h2>
-            <input
-              name="activityType"
-              placeholder="Activity Type"
-              value={activityType}
-              onChange={handleChange}
-            ></input>
+        {Auth.loggedIn() ? (
+          <div className="contactCard" style={{ textAlign: "center" }}>
+            <form onSubmit={handleFormSubmit}>
+              <div className="h2">
+                <h2 className="h2" htmlFor="Activity">
+                  Activity
+                </h2>
+                <input
+                  name="activityType"
+                  placeholder="Activity Type"
+                  value={activityType}
+                  onChange={handleChange}
+                ></input>
 
-            <input
-              name="activitySubject"
-              placeholder="Activity Subject"
-              value={activitySubject}
-              onChange={handleChange}
-            ></input>
+                <input
+                  name="activitySubject"
+                  placeholder="Activity Subject"
+                  value={activitySubject}
+                  onChange={handleChange}
+                ></input>
 
-            <input
-              name="activityDescription"
-              placeholder="Activity Description"
-              value={activityDescription}
-              onChange={handleChange}
-            ></input>
-            <button className="btn btn-primary btn-block py-3" type="submit">
-              <h4 style={{margin: '5px'}}>Add Activity</h4>
-            </button>
-          </form>
-        </div>
-      ) : (
-        <p>
-          You need to be logged in to add the activity details. Please{" "}
-          <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
-        </p>
-      )}
+                <input
+                  name="activityDescription"
+                  placeholder="Activity Description"
+                  value={activityDescription}
+                  onChange={handleChange}
+                ></input>
+              </div>
+              <button className="btn btn-primary btn-block py-3" type="submit">
+                Add Activity
+              </button>
+              <br />
+            </form>
+          </div>
+        ) : (
+          <p>
+            You need to be logged in to add the activity details. Please{" "}
+            <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
+          </p>
+        )}
+      </div>
     </div>
-    </div>
-
   );
 };
 

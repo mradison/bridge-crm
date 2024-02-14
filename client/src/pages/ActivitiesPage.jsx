@@ -13,13 +13,13 @@ const Activities = () => {
   console.log(activities);
   // console.log(data);
 
-  const { loading, data } = useQuery(QUERY_ACTIVITIES, {});
-  const activities = data?.activities || {};
+  // const { loading, data } = useQuery(QUERY_ACTIVITIES, {});
+  // const activities = data?.activities || {};
 
 
-  if (loading) {
-    return <div>Loading...</div>;
-  }
+  // if (loading) {
+  //   return <div>Loading...</div>;
+  // }
 
   return (
     <main>
@@ -32,10 +32,6 @@ const Activities = () => {
           <ActivityForm activityid={activities._id} />
         </div>
       </div>
-    </div>
-
-          <ActivityForm className="ContactForm" activityid={activities._id} />
-
     </main>
   );
 };

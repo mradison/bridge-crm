@@ -1,5 +1,4 @@
 * {
-  /* background-color: #242424; */
   color: #595ec1;
   /* border: 2px solid greenyellow; */
 }
@@ -20,9 +19,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-div {
-  background-color: var(--background-color);
-}
+div { 
+  background-color: var(--background-color); 
+} 
 
 .my-5 {
   display: flex;

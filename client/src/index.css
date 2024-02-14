@@ -254,3 +254,8 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+.activityDescription {
+  width: 166px;
+  height: 150px;
+
+}

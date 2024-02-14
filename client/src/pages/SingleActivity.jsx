@@ -78,8 +78,12 @@ const SingleActivity = () => {
             onSubmit={handleFormSubmit}
             style={{ padding: "15px", marginBottom: "30px" }}
           >
-            <div>
-              <label htmlFor="activityType">Type</label>
+            <table>
+              <tr>
+                <td>            
+              Type:
+              </td>
+              <td>
               <input
                 name="type"
              type="text"
@@ -87,10 +91,13 @@ const SingleActivity = () => {
                 onChange={handleChange}
                 defaultValue={activity.type}
               />
-            </div>
-
-            <div>
-              <label htmlFor="activitySubject">Subject</label>
+              </td>
+              </tr>
+              <tr>
+                <td>
+              Subject: 
+              </td>
+              <td>
               <input
                 name="subject"
                 defaultValue={activity.subject}
@@ -98,17 +105,22 @@ const SingleActivity = () => {
                 value={formData.subject}
                 onChange={handleChange}
               />
-            </div>
-
-            <div>
-              <label htmlFor="description">Description</label>
+              </td>
+              </tr>
+              <tr>
+                <td>
+              Description: 
+              </td>
+              <td>
               <textarea
                 name="description"
+                className="activityDescription"
                 value={activity.description}
                 onChange={handleChange}
               />
-            </div>
-
+              </td>
+              </tr>
+            </table>
             <div className="col-12 col-lg-3">
               <button className="btn btn-primary btn-block py-3" type="submit">
                 Update Activity

@@ -94,44 +94,84 @@ const SingleContact = () => {
         <div className="h2">
             <br />
               <h2 className="h2" htmlFor="Groups">Edit Contact</h2>
-
-            <input
-              name="Name"
-              value={NameValue}
-              onChange={(e) => SetName(e.target.value)}
-              onBlur={(e) => SetName(e.target.value)}
-              placeholder={contact.name}
-              required
-            />
-            <input
-              name="Nickname"
-              value={NicknameValue}
-              onChange={(e) => SetNickname(e.target.value)}
-              onBlur={(e) => SetNickname(e.target.value)}
-              placeholder={contact.nickname}
-            />
-            <input
-              name="Email"
-              value={EmailValue}
-              onChange={(e) => SetEmail(e.target.value)}
-              onBlur={(e) => SetEmail(e.target.value)}
-              placeholder={contact.email}
-              required
-            />
-            <input
-              name="CompanyName"
-              value={CompanyNameValue}
-              onChange={(e) => SetCompanyName(e.target.value)}
-              onBlur={(e) => SetCompanyName(e.target.value)}
-              placeholder={contact.company}
-            />
-            <input
-              name="Title"
-              value={TitleValue}
-              onChange={(e) => SetTitle(e.target.value)}
-              onBlur={(e) => SetTitle(e.target.value)}
-              placeholder={contact.title}
-            />
+            <table>
+              <tr>
+                <td>
+                Name: 
+                </td>
+                <td>
+                <input
+                  name="Name"
+                  value={NameValue}
+                  onChange={(e) => SetName(e.target.value)}
+                  onBlur={(e) => SetName(e.target.value)}
+                  placeholder={contact.name}
+                  required
+                />
+            </td>
+            </tr>
+            <tr>
+              <td>
+            Nickname: 
+            </td>
+              <td>
+              <input
+                name="Nickname"
+                value={NicknameValue}
+                onChange={(e) => SetNickname(e.target.value)}
+                onBlur={(e) => SetNickname(e.target.value)}
+                placeholder={contact.nickname}
+              />
+              </td>
+            </tr>
+            <tr>
+              <td>
+            Email: 
+            </td>
+              <td>
+                <input
+                  name="Email"
+                  value={EmailValue}
+                  onChange={(e) => SetEmail(e.target.value)}
+                  onBlur={(e) => SetEmail(e.target.value)}
+                  placeholder={contact.email}
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+              Company: 
+              </td>
+              <td>
+              <input
+                name="CompanyName"
+                value={CompanyNameValue}
+                onChange={(e) => SetCompanyName(e.target.value)}
+                onBlur={(e) => SetCompanyName(e.target.value)}
+                placeholder={contact.company}
+              />
+              </td>
+            </tr>
+            <tr>
+              <td>
+              Title: 
+              </td>
+              <td>
+              <input
+                name="Title"
+                value={TitleValue}
+                onChange={(e) => SetTitle(e.target.value)}
+                onBlur={(e) => SetTitle(e.target.value)}
+                placeholder={contact.title}
+              />
+              </td>
+            </tr>
+            <tr>
+              <td>
+            Department: 
+            </td>
+            <td>
             <input
               name="Department"
               value={DepartmentValue}
@@ -139,6 +179,13 @@ const SingleContact = () => {
               onBlur={(e) => SetDepartment(e.target.value)}
               placeholder={contact.department}
             />
+            </td>
+            </tr>
+            <tr>
+              <td>
+            Business Phone: 
+            </td>
+            <td>
             <input
               name="BusinessPhone"
               value={BusinessPhoneValue}
@@ -146,6 +193,13 @@ const SingleContact = () => {
               onBlur={(e) => SetBusinessPhone(e.target.value)}
               placeholder={contact.businessphone}
             />
+            </td>
+            </tr>
+            <tr>
+              <td>
+            Mobile Phone: 
+            </td>
+            <td>
             <input
               name="MobilePhone"
               value={MobilePhoneValue}
@@ -153,6 +207,13 @@ const SingleContact = () => {
               onBlur={(e) => SetMobilePhone(e.target.value)}
               placeholder={contact.mobilephone}
             />
+            </td>
+            </tr>
+            <tr>
+              <td>
+            Address 1: 
+            </td>
+            <td>
             <input
               name="Address1"
               value={Address1Value}
@@ -160,6 +221,13 @@ const SingleContact = () => {
               onBlur={(e) => SetAddress1(e.target.value)}
               placeholder={contact.address1}
             />
+            </td>
+            </tr>
+            <tr>
+              <td>
+            Address 2: 
+            </td>
+            <td>
             <input
               name="Address2"
               value={Address2Value}
@@ -167,6 +235,13 @@ const SingleContact = () => {
               onBlur={(e) => SetAddress2(e.target.value)}
               placeholder={contact.address2}
             />
+            </td>
+            </tr>
+            <tr>
+              <td>
+            City: 
+            </td>
+            <td>
             <input
               name="City"
               value={CityValue}
@@ -174,6 +249,13 @@ const SingleContact = () => {
               onBlur={(e) => SetCity(e.target.value)}
               placeholder={contact.city}
             />
+            </td>
+            </tr>
+            <tr>
+              <td>
+            State: 
+            </td>
+            <td>
             <input
               name="State"
               value={StateValue}
@@ -181,6 +263,13 @@ const SingleContact = () => {
               onBlur={(e) => SetState(e.target.value)}
               placeholder={contact.state}
             />
+            </td>
+            </tr>
+            <tr>
+              <td>
+            Country: 
+            </td>
+            <td>
             <input
               name="Country"
               value={CountryValue}
@@ -188,6 +277,13 @@ const SingleContact = () => {
               onBlur={(e) => SetCountry(e.target.value)}
               placeholder={contact.country}
             />
+            </td>
+            </tr>
+            <tr>
+              <td>
+            Zip Code: 
+            </td>
+            <td>
             <input
               name="ZipCode"
               value={ZipCodeValue}
@@ -195,6 +291,13 @@ const SingleContact = () => {
               onBlur={(e) => SetZipCode(e.target.value)}
               placeholder={contact.zip}
             />
+            </td>
+            </tr>
+            <tr>
+              <td>            
+            Website: 
+            </td>
+            <td>
             <input
               name="Website"
               value={WebsiteValue}
@@ -202,6 +305,9 @@ const SingleContact = () => {
               onBlur={(e) => SetWebsite(e.target.value)}
               placeholder={contact.website}
               />
+              </td>
+              </tr>
+              </table>
               </div>
               <button className="btn btn-primary btn-block py-3" type="submit">
                 Update Contact

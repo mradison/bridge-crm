@@ -77,131 +77,136 @@ const ContactForm = () => {
 
   return (
     <div>
-      <h3 className="activitiesTitle display-inline-block text-underline">Fill out the form below</h3>
+      <h3 className="activitiesTitle display-inline-block text-underline">
+        Fill out the form below
+      </h3>
       <div className="cardContainer">
-      {Auth.loggedIn() ? (
-        <div className="contactCard" style={{textAlign: "center"}}>
-          <form onSubmit={handleFormSubmit}>
-            <h3 htmlFor="Contact">Contact</h3>
-              <input
-                name="Name"
-                value={NameValue}
-                onChange={(e) => SetName(e.target.value)}
-                onBlur={(e) => SetName(e.target.value)}
-                placeholder="Name"
-                required
-              />
-              <input
-                name="Nickname"
-                value={NicknameValue}
-                onChange={(e) => SetNickname(e.target.value)}
-                onBlur={(e) => SetNickname(e.target.value)}
-                placeholder="Nickname"
-              />
-              <input
-                name="Email"
-                value={EmailValue}
-                onChange={(e) => SetEmail(e.target.value)}
-                onBlur={(e) => SetEmail(e.target.value)}
-                placeholder="E-mail"
-                required
-              />
-              <input
-                name="CompanyName"
-                value={CompanyNameValue}
-                onChange={(e) => SetCompanyName(e.target.value)}
-                onBlur={(e) => SetCompanyName(e.target.value)}
-                placeholder="Company Name"
-              />
-              <input
-                name="Title"
-                value={TitleValue}
-                onChange={(e) => SetTitle(e.target.value)}
-                onBlur={(e) => SetTitle(e.target.value)}
-                placeholder="Title"
-              />
-              <input
-                name="Department"
-                value={DepartmentValue}
-                onChange={(e) => SetDepartment(e.target.value)}
-                onBlur={(e) => SetDepartment(e.target.value)}
-                placeholder="Department"
-              />
-              <input
-                name="BusinessPhone"
-                value={BusinessPhoneValue}
-                onChange={(e) => SetBusinessPhone(e.target.value)}
-                onBlur={(e) => SetBusinessPhone(e.target.value)}
-                placeholder="Business Phone #"
-              />
-              <input
-                name="MobilePhone"
-                value={MobilePhoneValue}
-                onChange={(e) => SetMobilePhone(e.target.value)}
-                onBlur={(e) => SetMobilePhone(e.target.value)}
-                placeholder="Mobile Phone #"
-              />
-              <input
-                name="Address1"
-                value={Address1Value}
-                onChange={(e) => SetAddress1(e.target.value)}
-                onBlur={(e) => SetAddress1(e.target.value)}
-                placeholder="Address 1"
-              />
-              <input
-                name="Address2"
-                value={Address2Value}
-                onChange={(e) => SetAddress2(e.target.value)}
-                onBlur={(e) => SetAddress2(e.target.value)}
-                placeholder="Address 2"
-              />
-              <input
-                name="City"
-                value={CityValue}
-                onChange={(e) => SetCity(e.target.value)}
-                onBlur={(e) => SetCity(e.target.value)}
-                placeholder="City"
-              />
-              <input
-                name="State"
-                value={StateValue}
-                onChange={(e) => SetState(e.target.value)}
-                onBlur={(e) => SetState(e.target.value)}
-                placeholder="State"
-              />
-              <input
-                name="Country"
-                value={CountryValue}
-                onChange={(e) => SetCountry(e.target.value)}
-                onBlur={(e) => SetCountry(e.target.value)}
-                placeholder="Country"
-              />
-              <input
-                name="ZipCode"
-                value={ZipCodeValue}
-                onChange={(e) => SetZipCode(e.target.value)}
-                onBlur={(e) => SetZipCode(e.target.value)}
-                placeholder="Zip Code"
-              />
-              <input
-                name="Website"
-                value={WebsiteValue}
-                onChange={(e) => SetWebsite(e.target.value)}
-                onBlur={(e) => SetWebsite(e.target.value)}
-                placeholder="Website"
-              />
+        {Auth.loggedIn() ? (
+          <div className="contactCard" style={{ textAlign: "center" }}>
+            <form onSubmit={handleFormSubmit}>
+              <div className="h2">
+                <h2 className="h2" htmlFor="Contact">
+                  Contact
+                </h2>
+                <input
+                  name="Name"
+                  value={NameValue}
+                  onChange={(e) => SetName(e.target.value)}
+                  onBlur={(e) => SetName(e.target.value)}
+                  placeholder="Name"
+                  required
+                />
+                <input
+                  name="Nickname"
+                  value={NicknameValue}
+                  onChange={(e) => SetNickname(e.target.value)}
+                  onBlur={(e) => SetNickname(e.target.value)}
+                  placeholder="Nickname"
+                />
+                <input
+                  name="Email"
+                  value={EmailValue}
+                  onChange={(e) => SetEmail(e.target.value)}
+                  onBlur={(e) => SetEmail(e.target.value)}
+                  placeholder="E-mail"
+                  required
+                />
+                <input
+                  name="CompanyName"
+                  value={CompanyNameValue}
+                  onChange={(e) => SetCompanyName(e.target.value)}
+                  onBlur={(e) => SetCompanyName(e.target.value)}
+                  placeholder="Company Name"
+                />
+                <input
+                  name="Title"
+                  value={TitleValue}
+                  onChange={(e) => SetTitle(e.target.value)}
+                  onBlur={(e) => SetTitle(e.target.value)}
+                  placeholder="Title"
+                />
+                <input
+                  name="Department"
+                  value={DepartmentValue}
+                  onChange={(e) => SetDepartment(e.target.value)}
+                  onBlur={(e) => SetDepartment(e.target.value)}
+                  placeholder="Department"
+                />
+                <input
+                  name="BusinessPhone"
+                  value={BusinessPhoneValue}
+                  onChange={(e) => SetBusinessPhone(e.target.value)}
+                  onBlur={(e) => SetBusinessPhone(e.target.value)}
+                  placeholder="Business Phone #"
+                />
+                <input
+                  name="MobilePhone"
+                  value={MobilePhoneValue}
+                  onChange={(e) => SetMobilePhone(e.target.value)}
+                  onBlur={(e) => SetMobilePhone(e.target.value)}
+                  placeholder="Mobile Phone #"
+                />
+                <input
+                  name="Address1"
+                  value={Address1Value}
+                  onChange={(e) => SetAddress1(e.target.value)}
+                  onBlur={(e) => SetAddress1(e.target.value)}
+                  placeholder="Address 1"
+                />
+                <input
+                  name="Address2"
+                  value={Address2Value}
+                  onChange={(e) => SetAddress2(e.target.value)}
+                  onBlur={(e) => SetAddress2(e.target.value)}
+                  placeholder="Address 2"
+                />
+                <input
+                  name="City"
+                  value={CityValue}
+                  onChange={(e) => SetCity(e.target.value)}
+                  onBlur={(e) => SetCity(e.target.value)}
+                  placeholder="City"
+                />
+                <input
+                  name="State"
+                  value={StateValue}
+                  onChange={(e) => SetState(e.target.value)}
+                  onBlur={(e) => SetState(e.target.value)}
+                  placeholder="State"
+                />
+                <input
+                  name="Country"
+                  value={CountryValue}
+                  onChange={(e) => SetCountry(e.target.value)}
+                  onBlur={(e) => SetCountry(e.target.value)}
+                  placeholder="Country"
+                />
+                <input
+                  name="ZipCode"
+                  value={ZipCodeValue}
+                  onChange={(e) => SetZipCode(e.target.value)}
+                  onBlur={(e) => SetZipCode(e.target.value)}
+                  placeholder="Zip Code"
+                />
+                <input
+                  name="Website"
+                  value={WebsiteValue}
+                  onChange={(e) => SetWebsite(e.target.value)}
+                  onBlur={(e) => SetWebsite(e.target.value)}
+                  placeholder="Website"
+                />
+              </div>
+              <button type="submit">Submit</button>
               <br />
-            <button type="submit">Submit</button>
-            <br />
-          </form>
-        </div>
-      ) : (
-        <p>
-          You need to be logged in to share your thoughts. Please{" "}
-          <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
-        </p>
-      )}
-    </div>
+            </form>
+          </div>
+        ) : (
+          <p>
+            You need to be logged in to share your thoughts. Please{" "}
+            <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
+          </p>
+        )}
+      </div>
     </div>
   );
 };

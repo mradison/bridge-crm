@@ -11,21 +11,21 @@ function Homepage({ TasksValue }) {
                 <h3>The working person's customer management tool</h3>
             <div className='homepageLayout'>
                 <div className='leftColumn'>
-                        <img class="frontPics" src="badbusiness.png"/>
-                    <p class="LCText">
+                        <img className="frontPics" src="badbusiness.png"/>
+                    <p className="LCText">
                         Sign up to start the free experience!  From here you can create or modify your contacts, put them into groups, and add your activities all online in your own personal environment.
                     </p>
                         <br/>
-                        <Link class="LCLink" to='signup'>Click here to sign up for free!</Link>
+                        <Link className="LCLink" to='signup'>Click here to sign up for free!</Link>
                     </div>
                 <div className='rightColumn'>
-                        <img class="frontPics" src="goodbusiness.png"/>
-                    <p class="RCText">
+                        <img className="frontPics" src="goodbusiness.png"/>
+                    <p className="RCText">
                         The full version of this program has all of the features that are on the free tier, except you get the following:  Bragging rights.  Offline installations.  More bragging rights.
                         </p>
                         <br/>
                         <Link 
-                        class="RCLink"
+                        className="RCLink"
                         to='cart'>Click here to buy the full experience!!! (not really)</Link>
                 </div>
                 <section className="contentSection">

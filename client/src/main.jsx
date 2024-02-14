@@ -72,7 +72,11 @@ if (auth.loggedIn()) {
         }, {
           path: '/login',
           element: <Login />
-        }, {
+        },
+        { path: '/signup',
+          element: <Signup />
+        },
+         {
           path: '*',
           element: <Login />
         }

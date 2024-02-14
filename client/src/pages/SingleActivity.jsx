@@ -104,10 +104,9 @@ const SingleActivity = () => {
               <label htmlFor="description">Description</label>
               <textarea
                 name="description"
-            
-                value={formData.description}
+                value={activity.description}
                 onChange={handleChange}
-              >{activity.description}</textarea>
+              />
             </div>
 
             <div className="col-12 col-lg-3">
@@ -139,7 +138,7 @@ const SingleActivity = () => {
             <input
               name="activityType"
               placeholder={activity.type}
-              value={activityType}
+              value={activity.type}
               onChange={handleChange}
             ></input>
           </div>
@@ -148,7 +147,7 @@ const SingleActivity = () => {
             <input
               name="activitySubject"
               placeholder={activity.subject}
-              value={activitySubject}
+              value={activity.subject}
               onChange={handleChange}
             ></input>
           </div>
@@ -157,7 +156,7 @@ const SingleActivity = () => {
             <input
               name="activityDescription"
               placeholder={activity.description}
-              value={activityDescription}
+              value={activity.description}
               onChange={handleChange}
             ></input>
           </div>

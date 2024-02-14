@@ -62,16 +62,16 @@ const Groupsingle = () => {
     <div>
       <br />
     <div className="my-3">
-      {/* <div className="my-5" style={{ borderBottom: "2px solid" }}>
+      <div className="my-5" style={{ borderBottom: "2px solid" }}>
       {group.name} <br />
       </div>
       <br />
        <div className="m-3 p-4">
        {group.description} <br />
       </div> 
-      <br /> */}
+      <br />
   <form onSubmit={handleFormSubmit}>
-                  <div>
+                  
                     <div>
                       <h4>
                         <label htmlFor="Groups">Edit Group</label>
@@ -111,7 +111,7 @@ const Groupsingle = () => {
                   <br />
                   {groupUpdated}
                   <br />
-                  </div>
+                  
                   </form>
                    <br/>
                    

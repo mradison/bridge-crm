@@ -4,7 +4,7 @@ import { DELETE_ACTIVITY } from "../../utils/mutations";
 
 const ActivityList = ({ activities }) => {
   if (!activities.length) {
-    return <h3>No Activities Yet</h3>;
+    return <h3>No Activities exist</h3>;
   }
 
   const [deleteActivity] = useMutation(DELETE_ACTIVITY);
@@ -39,13 +39,14 @@ const ActivityList = ({ activities }) => {
                 <p>{activities.subject}</p>
                 <p>{activities.description}</p>
               </div>
+              
               <Link
                 className="btn btn-primary btn-block btn-squared"
                 to={`/activities/${activities._id}`}
               >
-                <h3 style={{ margin: "0px" }}>View Activity</h3>
+                <h4 style={{ marginBottom: "15px", color: "lightblue"  }}>View Activity</h4>
               </Link>
-              <br />
+              
               <button
                 className="btn btn-primary btn-block py-3"
                 onClick={() => handleDeleteActivity(activities._id)}

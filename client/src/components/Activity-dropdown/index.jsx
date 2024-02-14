@@ -61,16 +61,11 @@ const Activitydropdown = ({activity}) => {
       {contacts.map((contact) => <option key={contact._id} value={contact._id}>{contact.name}</option>)}
     </select>
 
-    <div>
-      <br />
-    </div>
-
-    <br />
-    <br />
-
+    <div style={{ marginTop: "45px" }}>
     <button className="btn btn-primary btn-block py-3" type="submit">
                     Associate Activity
    </button>
+   </div>
    <br />
    <div>
    {savesuccessfull}

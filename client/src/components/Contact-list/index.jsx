@@ -9,6 +9,7 @@ const Contactlist = ({ contacts }) => {
 
   const [deleteContact] = useMutation(DELETE_CONTACT);
 
+
   const handleDeleteContact = async (contactId) => {
     try {
       await deleteContact({
@@ -30,34 +31,25 @@ const Contactlist = ({ contacts }) => {
       <div className="contactCards">
         {contacts.map((contacts) => (
           <div key={contacts._id} className="cards">
-
             <div className="card-body bg-light p-1">
-              <p>{contacts.nickname}</p>
+              <h4>{contacts.nickname}</h4>
               <p>{contacts.businessphone}</p>
               <p>{contacts.email}</p>
               <p>{contacts.group}</p>
               <p>{contacts.activity}</p>
             </div>
 
-            <h4>{contacts.name}</h4>
-            <p>{contacts.nickname}</p>
-            <p>{contacts.businessphone}</p>
-            <p>{contacts.email}</p>
-            <p>{contacts.group}</p>
-            <p>{contacts.activity}</p>
-
-            <Link
-              className="btn btn-primary btn-block btn-squared"
-              to={`/Contacts/${contacts._id}`}>
-              View Contact
+            <Link className="btn btn-primary btn-block btn-squared" to={`/contacts/${contacts._id}`}>            
+              <h4  style={{ marginBottom: "15px", color: "lightblue" }}>
+                View Contact
+              </h4>
             </Link>
-            <br />
-            <br />
+
             <button
               className="btn btn-primary btn-block py-3"
               onClick={() => handleDeleteContact(contacts._id)}
             >
-              Delete this Contact!
+              <h4 style={{ margin: "2px" }}>Delete this Contact!</h4>
             </button>
           </div>
         ))}

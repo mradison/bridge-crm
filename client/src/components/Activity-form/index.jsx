@@ -60,7 +60,7 @@ const ActivityForm = () => {
   return (
     <div>
       <h3 className="activitiesTitle display-inline-block text-underline">
-        Create an activity below
+        Fill out Activity form below
       </h3>
       <div className="cardContainer">
         {Auth.loggedIn() ? (

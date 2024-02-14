@@ -76,20 +76,34 @@ const Groupsingle = () => {
           <h2 className="h2" htmlFor="Groups">
             Edit Group
           </h2>
-
+          <table>
+            <tr>
+              <td>
+                Group Name: 
+              </td>
+              <td>
           <input
             name="groupName"
             placeholder={group.name}
             value={groupName}
             onChange={handleChange}
           ></input>
-
+          </td>
+          </tr>
+          <tr>
+            <td>
+            Description: 
+            </td>
+            <td>
           <input
             name="groupDescription"
             placeholder={group.description}
             value={groupDescription}
             onChange={handleChange}
           ></input>
+          </td>
+          </tr>
+          </table>
         </div>
         <button className="btn btn-primary btn-block py-3" type="submit">
           Update Group

@@ -106,7 +106,7 @@ const SingleActivity = () => {
                 name="description"
                 value={activity.description}
                 onChange={handleChange}
-              ></textarea>
+              />
             </div>
 
             <div className="col-12 col-lg-3">

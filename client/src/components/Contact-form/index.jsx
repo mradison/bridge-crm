@@ -76,11 +76,11 @@ const ContactForm = () => {
   };
 
   return (
-    <>
-      <h3>Fill out the form below</h3>
-
+    <div>
+      <h3 className="activitiesTitle display-inline-block text-underline">Fill out the form below</h3>
+      <div className="cardContainer">
       {Auth.loggedIn() ? (
-        <>
+        <div className="contactCard" style={{textAlign: "center"}}>
           <form onSubmit={handleFormSubmit}>
             <h3 htmlFor="Contact">Contact</h3>
               <input
@@ -194,14 +194,15 @@ const ContactForm = () => {
             <button type="submit">Submit</button>
             <br />
           </form>
-        </>
+        </div>
       ) : (
         <p>
           You need to be logged in to share your thoughts. Please{" "}
           <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
         </p>
       )}
-    </>
+    </div>
+    </div>
   );
 };
 export default ContactForm;

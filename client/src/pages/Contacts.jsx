@@ -18,13 +18,16 @@ const Contacts = () => {
   }
   return (
     <main>
-      <h3 className="card-header bg-dark text-light p-2 m-0">
-        {contacts.name}       
-      </h3>  
+   <div className="my-3">
       <div className="my-5">
        <ContactList contacts={contacts} />
       </div>
+      <div className="my-3">
+        <div className="m-3 p-4">
         <ContactForm className="ContactForm" contactid={contacts._id} />
+        </div>
+      </div>
+    </div>
     </main>
   );
 };

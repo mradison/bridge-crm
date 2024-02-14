@@ -27,6 +27,7 @@ body {
 
 .cards {
   padding: 10px;
+  width: 27%;
 }
 
 .App {
@@ -34,7 +35,7 @@ body {
   justify-content: center;
   align-items: center;
   margin: auto;
-}
+} 
 
 
 nav {
@@ -60,6 +61,13 @@ main {
   7px 7px 10px #595ec1,
   -1px -1px 10px #212346;
 }
+
+.cardContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 .GroupForm {
   display: flex;
@@ -100,6 +108,7 @@ form {
   font-size: 20px;
 }
 
+
 .LCText, .RCText {
   border-radius: 2em;
   padding-top: 30px;
@@ -123,6 +132,7 @@ form {
 .contactCards {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 footer {

@@ -24,34 +24,36 @@ const Grouplist = ({ groups }) => {
   };
 
   return (
-    <>
+    <div>
       <h2 className="activitiesTitle display-inline-block text-underline">
         Groups
       </h2>
-      <div className="contactCards">
-        {groups.map((groups) => (
-          <div key={groups._id} className="cards">
-            <h4 className="card-header bg-primary text-light p-2">
-              {groups.name} <br />
-            </h4>
-            <p>{groups.description}</p>
-            <Link
-              className="btn btn-primary btn-block btn-squared"
-              to={`/groups/${groups._id}`}
-            >
-              View Group
-            </Link>
-            <br />
-            <button
-              className="btn btn-primary btn-block py-3"
-              onClick={() => handleDeleteGroup(groups._id)}
-            >
-              Delete this Group!
-            </button>
-          </div>
-        ))}
-      </div>
-    </>
+      <>
+        <div className="contactCards">
+          {groups.map((groups) => (
+            <div key={groups._id} className="cards">
+              <h4 className="card-body bg-light p-1">
+                {groups.name} <br />
+              </h4>
+              <p>{groups.description}</p>
+              <Link
+                className="btn btn-primary btn-block btn-squared"
+                to={`/groups/${groups._id}`}
+              >
+                View Group
+              </Link>
+              <br />
+              <button
+                className="btn btn-primary btn-block py-3"
+                onClick={() => handleDeleteGroup(groups._id)}
+              >
+                Delete this Group!
+              </button>
+            </div>
+          ))}
+        </div>
+      </>
+    </div>
   );
 };
 

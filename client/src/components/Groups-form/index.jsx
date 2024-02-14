@@ -46,10 +46,10 @@ const GroupsForm = () => {
   };
 
   return (
-    <>
-      <h3> Fill out Group form below </h3>
+    <div>
+      <h3 className="activitiesTitle display-inline-block text-underline"> Fill out Group form below </h3>
 
-      <div className="GroupForm">
+      <div className="cardContainer">
       {Auth.loggedIn() ? (
         <>
           <form onSubmit={handleFormSubmit}>
@@ -85,7 +85,7 @@ const GroupsForm = () => {
         </p>
       )}
       </div>
-    </>
+    </div>
   );
 };
 

@@ -23,17 +23,17 @@ const Navbar = () => {
                             <div className="pageBtn">
                                 <Link className="btn btn-lg btn-primary m-2" to="/Contacts">
                                     <button>
-                                        Contact list
+                                        Contact List
                                     </button>
                                 </Link>                  
                                 <Link className="btn btn-lg btn-primary m-2" to="/Groups">
                                     <button>
-                                        Group list
+                                        Group List
                                     </button>
                                 </Link>    
                                 <Link className="btn btn-lg btn-primary m-2" to="/Activities">
                                     <button>
-                                        Activity list
+                                        Activity List
                                     </button>
                                 </Link>
                                     <button className="btn btn-lg btn-light m-2" onClick={logout}>

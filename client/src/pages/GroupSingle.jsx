@@ -119,8 +119,7 @@ const Groupsingle = () => {
                   </tr>
           {contacts.map(contact => (
             contact.groupInfo && contact.groupInfo.some(groupInfo => groupInfo.groupId === group._id) && (
-              
-                  <tr>
+                  <tr key={contact._id}>
                     <td>
                       {contact.name}
                     </td>

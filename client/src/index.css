@@ -1,6 +1,5 @@
 * {
   color: #595ec1;
-  /* border: 2px solid greenyellow; */
 }
 
 div
@@ -61,7 +60,6 @@ main {
   justify-content: center;
   align-items: center;
   min-height: 65vh;
-  /* width: 100%; */
 }
 
 .frontPics {

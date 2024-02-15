@@ -1,4 +1,3 @@
-// TODO: ADD STARTER CODE
 import { useQuery } from '@apollo/client';
 import { Link } from 'react-router-dom';
 

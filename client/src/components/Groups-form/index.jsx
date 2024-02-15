@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 
-// TODO: ADD MUTATION NAME FORM MUTATION.JS
 import { ADD_GROUP } from "../../utils/mutations";
 import { QUERY_GROUPS } from "../../utils/queries";
 
@@ -12,7 +11,6 @@ const GroupsForm = () => {
   const [groupName, setGroupName] = useState("");
   const [groupDescription, setgroupDescription] = useState("");
 
-  // TODO:ADD MUTATION NAME LINE 14
   const [addGroup, { error }] = useMutation(ADD_GROUP, {
     refetchQueries: [QUERY_GROUPS, "groups"],
   });
@@ -21,7 +19,6 @@ const GroupsForm = () => {
     event.preventDefault();
 
     try {
-      // TODO:ADD MUTATION NAME AFTER AWAIT LINE 21
       const { data } = await addGroup({
         variables: {
           newGroup: { name: groupName, description: groupDescription },

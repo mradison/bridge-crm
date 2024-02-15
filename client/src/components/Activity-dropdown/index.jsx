@@ -44,7 +44,6 @@ const Activitydropdown = ({activity}) => {
   });
 
   const contacts = data?.contacts || {};
-  //console.log(contacts);
 
   if (loading) {
     return <div>Loading...</div>;

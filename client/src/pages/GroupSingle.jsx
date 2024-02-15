@@ -106,21 +106,33 @@ const Groupsingle = () => {
         </button>
         <h2>Contacts in group: </h2>
         <ul>
-          {console.log(group._id)}
-          {console.log(contacts)}
+          
+          <table>
+                <tbody>
+                  <tr>
+                  <th>
+                    <strong>Name</strong>
+                  </th>
+                  <th>
+                    <strong>Email</strong>
+                  </th>
+                  </tr>
           {contacts.map(contact => (
             contact.groupInfo && contact.groupInfo.some(groupInfo => groupInfo.groupId === group._id) && (
-              <li key={contact._id}>
-                <div>
-                  <strong>Name:</strong> {contact.name}
-                </div>
-                <div>
-                  <strong>Email:</strong> {contact.email}
-                </div>
-                {/* Add more details as needed */}
-              </li>
+              
+                  <tr>
+                    <td>
+                      {contact.name}
+                    </td>
+                    <td>
+                      {contact.email}
+                    </td>
+                  </tr>
+
             )
           ))}
+                    </tbody>
+              </table>
         </ul>
 
 

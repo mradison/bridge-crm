@@ -21,7 +21,7 @@ const GroupsForm = () => {
     try {
       const { data } = await addGroup({
         variables: {
-          newGroup: { name: groupName, description: groupDescription },
+          newGroup: { name: groupName, description: groupDescription, groupId: ""},
         },
       });
 

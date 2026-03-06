@@ -13,7 +13,7 @@ const Activities = () => {
   console.log(activities);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div>Loading....</div>;
   }
 
   return (
